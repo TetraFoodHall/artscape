@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARTSCAPE</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="services.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/eec696899d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="loading-overlay">
+      <video
+        src="video/heZ7PSdsLD.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+        style="
+          width: 180px;
+          height: 180px;
+          object-fit: cover;
+          border-radius: 50%;
+          box-shadow: 0 0 32px orange;
+        "
+      ></video>
+    </div>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">ARTSCAPE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#myNavbar"
+          aria-controls="myNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link main-page" href="../index.html">صفحه اصلی</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shopSection.html">فروشگاه</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="services.html"
+                id="servicesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >خدمات</a
+              >
+              <ul
+                class="dropdown-menu text-end"
+                aria-labelledby="servicesDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="./services.html"
+                    >خدمات آرت اسکیپ</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="photography.html"
+                    >نمونه کار عکاسی</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="videography.html"
+                    >نمونه کار فیلمبرداری</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">گالری</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">وبلاگ</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">حساب کاربری من</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i
+                  class="fa-solid fa-basket-shopping fa-xl"
+                  style="color: #ffffff"
+                ></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i
+                  class="fa-solid fa-magnifying-glass fa-xl"
+                  style="color: #ffffff"
+                ></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero carousel -->
+    <div class="container-fluid">
+      <div class="hero-background">
+        <img
+          src="../images/photo_2025-05-24_11-27-22.jpg"
+          alt="..."
+          class="hero-bg-img"
+        />
+        <div class="hero-caption-box">
+          <h2 class="hero-caption-title">خدمات ما</h2>
+          <p class="hero-caption-text">
+            جهان بدون عکاسی برای ما مثل دنیای بدون نور است، که ذهن ما را باز
+            می‌کند و احساسات را بیان می‌کند.
+          </p>
+          <a href="#" class="hero-caption-btn">مشاهده نمونه کارها</a>
+        </div>
+      </div>
+    </div>
+    <!-- Feature Started -->
+    <div class="container">
+      <h1 class="text-center mb-5 feature-header">ویژگی های ما</h1>
+
+      <div class="row" id="features-row">
+        <!-- ویژگی‌ها به صورت داینامیک اینجا قرار می‌گیرند -->
+      </div>
+    </div>
+    <!-- Feature End -->
+
+    <!-- اسلایدر عکس با دکمه و متن -->
+    <div class="slider-section">
+      <div class="slider-wrapper">
+        <div class="slider-slide active">
+          <img
+            src="../images/photo_2025-05-22_15-30-26.jpg"
+            alt="عکاسی حرفه‌ای"
+            class="slider-img mb-4"
+          />
+          <h2 class="slider-title">عکاسی حرفه‌ای</h2>
+          <p class="slider-desc">
+            ارائه خدمات عکاسی با بهترین کیفیت و تجهیزات روز دنیا.
+          </p>
+          <a href="#" class="slider-btn">مشاهده بیشتر</a>
+        </div>
+        <div class="slider-slide">
+          <img
+            src="../images/photo_2025-05-22_15-30-33.jpg"
+            alt="طراحی گرافیک"
+            class="slider-img mb-4"
+          />
+          <h2 class="slider-title">طراحی گرافیک</h2>
+          <p class="slider-desc">
+            طراحی لوگو، پوستر و بنرهای تبلیغاتی با خلاقیت بالا.
+          </p>
+          <a href="#" class="slider-btn">مشاهده بیشتر</a>
+        </div>
+        <div class="slider-slide">
+          <img
+            src="../images/photo_2025-05-24_11-27-22.jpg"
+            alt="فیلمبرداری حرفه‌ای"
+            class="slider-img mb-4"
+          />
+          <h2 class="slider-title">فیلمبرداری حرفه‌ای</h2>
+          <p class="slider-desc">
+            فیلمبرداری حرفه‌ای مراسم و پروژه‌های تبلیغاتی.
+          </p>
+          <a href="#" class="slider-btn">مشاهده بیشتر</a>
+        </div>
+      </div>
+      <div class="slider-controls mt-3">
+        <span class="slider-dot active"></span>
+        <span class="slider-dot"></span>
+        <span class="slider-dot"></span>
+      </div>
+    </div>
+    <!-- پایان اسلایدر -->
+    <!-- comments start-->
+    <div class="container">
+      <h1 class="text-center mt-5">از نگاه مشتریان:</h1>
+      <div class="comments">
+        <div class="row comment-setion"></div>
+      </div>
+    </div>
+    <!-- comment end -->
+    <!-- courses -->
+    <div class="container-fluid">
+      <div class="courses-slider-container position-relative">
+        <div
+          class="courses-slider d-flex flex-nowrap overflow-hidden"
+          id="courses-slider"
+        ></div>
+        <button
+          class="slider-arrow prev-arrow btn position-absolute top-50 start-0 translate-middle-y"
+          id="courses-prev"
+          style="
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+          "
+        >
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <button
+          class="slider-arrow next-arrow btn position-absolute top-50 end-0 translate-middle-y"
+          id="courses-next"
+          style="
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+          "
+        >
+          <i class="fa fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Collaborations -->
+    <div class="container">
+      <div class="collaborations">
+        <div class="row">
+          <img
+            class="col-12 col-md-3"
+            src="../icons/14639-NPQ7PS-01.svg"
+            alt="..."
+          />
+          <img
+            class="col-12 col-md-3"
+            src="../icons/14639-NPQ7PS-01.svg"
+            alt="..."
+          />
+          <img
+            class="col-12 col-md-3"
+            src="../icons/14639-NPQ7PS-01.svg"
+            alt="..."
+          />
+          <img
+            class="col-12 col-md-3"
+            src="../icons/14639-NPQ7PS-01.svg"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
+    <!-- shopsectionStarted -->
+    <footer class="mt-5">
+      <div class="container pt-4">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <h3>ARTSCAPE</h3>
+            <p class="mt-3">
+              جهان بدون عکاسی برای ما مثل دنیای بدون نور است، که ذهن ما را باز
+              می‌کند و احساسات را بیان می‌کند.
+            </p>
+          </div>
+          <div class="col-12 col-md-4">
+            <h3>جدیدترین تصاویر</h3>
+            <div class="footer-imgs">
+              <img
+                src="../images/photo_2025-05-24_11-27-22.jpg"
+                alt="تصویر 1"
+              />
+              <img
+                src="../images/photo_2025-05-24_11-27-22.jpg"
+                alt="تصویر 2"
+              />
+              <img
+                src="../images/photo_2025-05-24_11-27-22.jpg"
+                alt="تصویر 3"
+              />
+              <img
+                src="../images/photo_2025-05-24_11-27-22.jpg"
+                alt="تصویر 4"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <h3>اطلاعات تماس</h3>
+            <p class="mt-4">ایمیل: <span>2250450@gmail.com</span></p>
+            <p class="mt-4">تلفن: <span>09918728292</span></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../main.js"></script>
+    <script></script>
+  </body>
+</html>
