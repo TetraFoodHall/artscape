@@ -1,3 +1,161 @@
+// داینامیک ساختن نمونه کارهای ویدیویی
+const videoSamples = [
+  {
+    src: "../images/photo_2025-05-22_15-30-26.jpg",
+    category: "صنعتی",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+  },
+  {
+    src: "../images/photo_2025-05-22_15-30-33.jpg",
+    category: "تیزر تبلیغاتی",
+    video: "../video/heZ7PSdsLD.mp4",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+  },
+];
+
+const videoSampleItemsContainer = document.querySelector(".sampel-items");
+const videoFilterNav = document.querySelectorAll(".sampel-navbar ul li");
+
+function renderVideoSamples(filter) {
+  let filtered =
+    filter === "همه"
+      ? videoSamples
+      : videoSamples.filter((item) => item.category === filter);
+  videoSampleItemsContainer.innerHTML = "";
+  filtered.forEach((item, idx) => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "sample-item-wrapper fade-in";
+    wrapper.style.animationDelay = idx * 80 + "ms";
+    wrapper.innerHTML = `
+      <img src="${item.src}" alt="نمونه کار ویدیویی ${
+      idx + 1
+    }" class="sample-img" />
+      <div class="sample-hover-text">مشاهده ویدیو</div>
+      <button class="play-video-btn" data-video="${
+        item.video
+      }" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.5);border:none;border-radius:50%;padding:12px;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center;">
+        <i class='fa-solid fa-play' style='color:#fff;font-size:1.5em;'></i>
+      </button>
+    `;
+    videoSampleItemsContainer.appendChild(wrapper);
+  });
+  addVideoSampleClickHandlers();
+}
+
+function addVideoSampleClickHandlers() {
+  document.querySelectorAll(".play-video-btn").forEach((btn) => {
+    btn.onclick = function (e) {
+      e.stopPropagation();
+      const videoSrc = this.getAttribute("data-video");
+      showVideoModal(videoSrc);
+    };
+  });
+}
+
+function showVideoModal(videoSrc) {
+  let modal = document.getElementById("video-sample-modal");
+  if (!modal) {
+    modal = document.createElement("div");
+    modal.id = "video-sample-modal";
+    modal.innerHTML = `
+      <div class="modal-backdrop" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);z-index:9999;"></div>
+      <div class="modal-content" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10000;max-width:90vw;max-height:80vh;">
+        <button class="modal-close" style="position:absolute;top:-32px;left:0;background:transparent;border:none;border-radius:50%;width:36px;height:36px;font-size:1.5rem;z-index:2;cursor:pointer;color:#fff;">&times;</button>
+        <video controls autoplay style="width:100%;height:60vh;max-width:90vw;background:#000;border-radius:12px;">
+          <source src="${videoSrc}" type="video/mp4" />
+        </video>
+      </div>
+    `;
+    document.body.appendChild(modal);
+  } else {
+    modal.querySelector("video source").src = videoSrc;
+    modal.querySelector("video").load();
+    modal.style.display = "block";
+  }
+  modal.querySelector(".modal-close").onclick = () => modal.remove();
+  modal.querySelector(".modal-backdrop").onclick = () => modal.remove();
+}
+
+videoFilterNav.forEach((li) => {
+  li.addEventListener("click", function () {
+    videoFilterNav.forEach((l) => l.classList.remove("active"));
+    this.classList.add("active");
+    renderVideoSamples(this.textContent.trim());
+  });
+});
+
+// نمایش اولیه همه نمونه‌ها
+renderVideoSamples("همه");
+
 // داینامیک اسلایدر نمونه کار فیلمبرداری
 const videoSliderData = [
   {
@@ -219,4 +377,90 @@ window.addEventListener("DOMContentLoaded", function () {
         this.style.setProperty("--progress", percent + "%");
       });
     });
+
+  // داینامیک کردن بخش درباره ما
+  const aboutTabs = [
+    {
+      title: "سبک کاری ما",
+      text:
+        "سبک من ترکیبی است بین عکاسی تبلیغاتی و عکاسی هنری با لمس مد و روشنایی خلاق. عکس های من از نور، رنگ، تکنیک های پردازش سیاه و سفید، عکس های پرنعمت، چشم انداز خلاق و البته، مهمتر از همه، شخصیت های مردم من عکاسی الهام گرفته اند!",
+      features: [
+        {
+          icon: "<i class='fa-solid fa-camera fa-2xl' style='color: #ac8a11'></i>",
+          title: "حرفه ای بودن",
+          desc: "ما تمام حرفه ، تعهد و مراقبت خود را سرمایه گذاری می کنیم.",
+        },
+        {
+          icon: "<i class='fa-brands fa-envira fa-2xl' style='color: #ac8a11'></i>",
+          title: "شفافیت",
+          desc: "ما در هر اتفاقی که در داخل و خارج رخ می دهد شفاف هستیم.",
+        },
+      ],
+      img: "../images/photo_2025-05-22_15-30-26.jpg",
+    },
+    {
+      title: "ماموریت های ما",
+      text:
+        "ماموریت ما ارائه بهترین خدمات فیلمبرداری و عکاسی با بالاترین کیفیت و خلاقیت است تا رضایت کامل مشتریان را جلب کنیم.",
+      features: [
+        {
+          icon: "<i class='fa-solid fa-bolt fa-2xl' style='color: #ac8a11'></i>",
+          title: "سرعت عمل",
+          desc: "ما پروژه‌ها را در سریع‌ترین زمان ممکن و با کیفیت بالا تحویل می‌دهیم.",
+        },
+        {
+          icon: "<i class='fa-solid fa-users fa-2xl' style='color: #ac8a11'></i>",
+          title: "تیم حرفه‌ای",
+          desc: "تیم ما متشکل از افراد متخصص و با تجربه است.",
+        },
+      ],
+      img: "../images/photo_2025-05-22_15-30-33.jpg",
+    },
+    {
+      title: "چشم انداز ما",
+      text:
+        "چشم انداز ما تبدیل شدن به یکی از برترین استودیوهای خلاق در زمینه فیلمبرداری و عکاسی در سطح کشور است.",
+      features: [
+        {
+          icon: "<i class='fa-solid fa-star fa-2xl' style='color: #ac8a11'></i>",
+          title: "کیفیت ممتاز",
+          desc: "همیشه کیفیت را در اولویت قرار می‌دهیم.",
+        },
+        {
+          icon: "<i class='fa-solid fa-lightbulb fa-2xl' style='color: #ac8a11'></i>",
+          title: "نوآوری",
+          desc: "همواره به دنبال ایده‌های نو و خلاقانه هستیم.",
+        },
+      ],
+      img: "../images/photo_2025-05-24_11-27-22.jpg",
+    },
+  ];
+
+  const aboutNavItems = document.querySelectorAll(".about-nav ul li");
+  const aboutCaption = document.querySelector(".about-caption p");
+  const aboutFeatures = document.querySelectorAll(".about-feature");
+  const aboutImage = document.querySelector(".about-image img");
+
+  aboutNavItems.forEach((li, idx) => {
+    li.style.cursor = "pointer";
+    li.addEventListener("click", function () {
+      aboutNavItems.forEach((item) => item.classList.remove("active"));
+      this.classList.add("active");
+      // تغییر متن
+      aboutCaption.innerHTML = aboutTabs[idx].text;
+      // تغییر ویژگی‌ها
+      aboutFeatures.forEach((featureDiv, fIdx) => {
+        if (aboutTabs[idx].features[fIdx]) {
+          featureDiv.innerHTML =
+            aboutTabs[idx].features[fIdx].icon +
+            `<h4 class='mt-4'>${aboutTabs[idx].features[fIdx].title}</h4>` +
+            `<p class='mt-4'>${aboutTabs[idx].features[fIdx].desc}</p>`;
+        } else {
+          featureDiv.innerHTML = "";
+        }
+      });
+      // تغییر عکس
+      aboutImage.src = aboutTabs[idx].img;
+    });
+  });
 });
