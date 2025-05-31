@@ -1,0 +1,370 @@
+.hero-background {
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: auto;
+  overflow: hidden;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-bg-img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+body > nav.navbar {
+  background: transparent !important;
+  z-index: 2;
+}
+
+.w-100,
+.carousel,
+.social-sidebar,
+.custom-controls-carousel {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-caption-box {
+  position: absolute;
+  top: 6rem;
+  right: 4vw;
+  min-width: 320px;
+  max-width: 400px;
+  border-radius: 1.5rem;
+  padding: 2rem 2.5rem 2.5rem 2rem;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-caption-box.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-caption-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.hero-caption-text {
+  font-size: 1.1rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  line-height: 2;
+}
+
+.hero-caption-btn {
+  border: none;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  border: 1px solid #f7a233;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  color: white;
+}
+
+.hero-caption-btn:hover {
+  background: #f7a233;
+}
+
+/* پیجینیشن عمودی */
+.vertical-pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  z-index: 20;
+  padding: 16px 8px;
+}
+
+.vertical-pagination .page-number {
+  font-size: 1.1rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 2px;
+  transition: color 0.3s;
+}
+
+.vertical-pagination .page-number.active {
+  color: orange;
+}
+
+.vertical-pagination .separator {
+  width: 2px;
+  height: 24px;
+  background: #fff;
+  border-radius: 1px;
+  margin: 2px 0;
+  display: block;
+  transition: height 0.4s, background 0.4s;
+}
+
+.vertical-pagination .separator.shrink {
+  height: 10px;
+  background: orange;
+}
+
+@media (max-width: 768px) {
+  .hero-caption-box {
+    top: 4.5rem;
+    right: 1vw;
+    min-width: 220px;
+    max-width: 90vw;
+    padding: 1.2rem 1.2rem 1.5rem 1rem;
+  }
+  .hero-caption-title {
+    font-size: 1.3rem;
+  }
+  .hero-caption-text {
+    font-size: 0.95rem;
+  }
+  .hero-caption-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+  }
+}
+
+.my-podcast,
+.pod-left img,
+.pod-right {
+  height: 30rem;
+}
+.pod-right {
+  padding-top: 5rem;
+}
+.pod-link {
+  color: #f7a233;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* موزیک پلیر و آلبوم موزیک */
+.music-player {
+  background: #232323;
+  padding: 24px 18px 18px 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 0 16px #ff98004d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+}
+.player-btn {
+  background: #ff9800;
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.player-btn:hover {
+  background: #ffb74d;
+}
+#seekBar,
+#volumeBar {
+  accent-color: #ff9800;
+  height: 4px;
+}
+#seekBar {
+  width: 120px;
+}
+#volumeBar {
+  width: 70px;
+}
+.music-album {
+  margin-top: 18px;
+}
+.album-scroll {
+  display: flex;
+  flex-direction: column; /* تغییر به ستونی */
+  overflow-y: auto;
+  gap: 18px;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  animation: album-scroll-appear 1s;
+  max-height: 350px;
+  overflow-x: hidden !important;
+}
+
+/* استایل اسکرول بار عمودی نارنجی برای آلبوم موزیک */
+.album-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #ff9800 #232323;
+}
+.album-scroll::-webkit-scrollbar {
+  width: 8px;
+  background: #232323;
+  border-radius: 8px;
+}
+.album-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff9800 60%, #ffb74d 100%);
+  border-radius: 8px;
+  min-height: 40px;
+  box-shadow: 0 0 6px #ff980088;
+}
+.album-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #ffb74d 60%, #ff9800 100%);
+}
+.album-scroll::-webkit-scrollbar-track {
+  background: #232323;
+  border-radius: 8px;
+}
+
+@keyframes album-scroll-appear {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.album-item {
+  background: #181818;
+  border-radius: 16px;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  padding: 10px 10px 16px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 0 8px #ff98004d;
+  position: relative;
+  transition: transform 0.2s;
+  gap: 16px;
+}
+.album-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 16px #ff9800;
+}
+.album-img-box {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 0;
+}
+.album-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.album-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ff9800cc;
+  color: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.92;
+  transition: background 0.2s, opacity 0.2s;
+}
+.album-play-icon:hover {
+  background: #fff;
+  color: #ff9800;
+  opacity: 1;
+}
+.album-title {
+  color: #fff;
+  font-size: 16px;
+  text-align: right;
+  margin-top: 0;
+  font-weight: 500;
+  direction: rtl;
+}
+.album-main-img {
+  object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 24px #ff9800;
+}
+.podcast-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .hero-caption-box {
+    top: 4.5rem;
+    right: 1vw;
+    min-width: 220px;
+    max-width: 90vw;
+    padding: 1.2rem 1.2rem 1.5rem 1rem;
+  }
+  .hero-caption-title {
+    font-size: 1.3rem;
+  }
+  .hero-caption-text {
+    font-size: 0.95rem;
+  }
+  .hero-caption-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+  }
+  .album-main-img {
+    height: 100% !important;
+    width: 100% !important;
+    aspect-ratio: 1/1;
+  }
+  .podcast-right {
+    height: 220px;
+    min-height: 220px;
+  }
+  .album-img-box {
+    width: 50px;
+    height: 50px;
+  }
+}
