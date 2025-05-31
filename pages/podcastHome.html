@@ -177,7 +177,7 @@
       </div>
     </div>
     <!-- podcast-music -->
-    <div class="container mt-5 bg-dark">
+    <div class="container music-container mt-5 bg-dark">
       <div class="podcast-musics">
         <div class="row">
           <div class="podcast-left col-12 col-md-6">
@@ -242,10 +242,72 @@
       </div>
     </div>
     <!-- discography -->
-     
+    <div class="container mt-5">
+      <div class="discography">
+        <h1 class="text-right">دیسکوگرافی</h1>
+        <div class="row mt-5">
+          <!-- دیسکوگرافی داینامیک اینجا رندر می‌شود -->
+        </div>
+      </div>
+    </div>
+    <!-- my video -->
+    <div class="container-fluid"></div>
+    <!-- dynamic video section -->
+    <div class="container-fluid my-5">
+      <div
+        class="position-relative w-100"
+        style="cursor: pointer; min-height: 220px"
+        id="videoBanner"
+      >
+        <img
+          src="../images/photo_2025-05-24_11-27-22.jpg"
+          alt="official video"
+          class="w-100 rounded shadow"
+          style="object-fit: cover; max-height: 420px; min-height: 220px"
+        />
+        <div
+          class="video-banner-caption position-absolute top-50 start-50 translate-middle text-center"
+        >
+          <h4 class="fw-bold mb-0">باد شمالی سرد</h4>
+          <p>از اولین ویدیو رسمی ما دیدن کنید</p>
+          <span class="video-play-icon d-inline-block mt-2">
+            <i class="fa-solid fa-circle-play fa-lg"></i>
+          </span>
+        </div>
+      </div>
+      <!-- Video Modal -->
+      <div
+        class="modal fade"
+        id="officialVideoModal"
+        tabindex="-1"
+        aria-labelledby="officialVideoModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body p-0">
+              <video
+                id="officialVideo"
+                src="../video/15445977-uhd_3840_2160_30fps (1).mp4"
+                controls
+                style="width: 100%; height: 100%"
+                poster="../images/photo_2025-05-24_11-27-22.jpg"
+              ></video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end dynamic video section -->
+    <!-- my pods -->
+    <div class="container">
+      <h1 class="text-right">پادکست های من</h1>
+      <div class="podcast-list">
+        <div class="row"></div>
+      </div>
+    </div>
     <!-- shopsectionStarted -->
     <footer class="mt-5">
-      س
       <div class="container pt-4">
         <div class="row">
           <div class="col-12 col-md-4">

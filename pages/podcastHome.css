@@ -308,6 +308,16 @@ body > nav.navbar {
   color: #ff9800;
   opacity: 1;
 }
+.video-play-icon {
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0;
+}
+.video-play-icon i {
+  background: none !important;
+  box-shadow: none !important;
+  filter: none;
+}
 .album-title {
   color: #fff;
   font-size: 16px;
@@ -366,5 +376,219 @@ body > nav.navbar {
   .album-img-box {
     width: 50px;
     height: 50px;
+  }
+}
+
+/* دیسکوگرافی */
+.discography .disc-link {
+  display: block;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.discography .disc-link:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(255, 140, 0, 0.18);
+}
+.discography .disc-title {
+  display: none;
+}
+.discography .disc img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+}
+.disc-pagination button {
+  min-width: 36px;
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 40px;
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  transition: all 0.2s;
+}
+.disc-pagination button.btn-primary,
+.disc-pagination button:focus,
+.disc-pagination button.active {
+  color: #ffd600 !important;
+  background: orange !important;
+  border-color: #fff !important;
+}
+.disc-pagination button:hover {
+  background: rgba(255, 152, 0, 0.12) !important;
+  color: #ffd600 !important;
+  border-color: #fff !important;
+}
+
+/* استایل بخش ویدیوی داینامیک */
+#videoBanner {
+  min-height: 220px;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+deoBanner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85) saturate(1.1);
+  transition: filter 0.3s;
+}
+#videoBanner:hover img {
+  filter: brightness(1) saturate(1.2);
+}
+#videoBanner .position-absolute {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  letter-spacing: 0.5px;
+}
+@media (max-width: 768px) {
+  #videoBanner .position-absolute {
+    font-size: 1.1rem;
+    padding: 12px 8px;
+  }
+  #videoBanner {
+    min-height: 120px;
+  }
+}
+
+/* استایل مدال ویدیو */
+#officialVideoModal .modal-content {
+  background: #181818;
+  border-radius: 18px;
+}
+#officialVideoModal .btn-close {
+  filter: invert(1);
+}
+#officialVideo {
+  border-radius: 12px;
+  background: #000;
+}
+.video-banner-caption {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 24px 32px;
+  border-radius: 16px;
+  z-index: 2;
+  width: max-content;
+  max-width: 90vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  letter-spacing: 0.5px;
+}
+@media (max-width: 768px) {
+  .video-banner-caption {
+    font-size: 1.1rem;
+    padding: 12px 8px;
+  }
+}
+
+/* استایل کارت پادکست */
+.podcast-card {
+  transition: box-shadow 0.2s, transform 0.2s;
+  min-height: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(255, 140, 0, 0.10);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: podcast-fade-in 0.7s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+.podcast-card:hover {
+  box-shadow: 0 8px 32px rgba(255, 140, 0, 0.18);
+  transform: translateY(-4px) scale(1.03);
+}
+.podcast-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  transition: filter 0.2s;
+}
+.podcast-img-link:hover .podcast-img {
+  filter: brightness(0.92) saturate(1.1);
+}
+.podcast-title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: right;
+}
+.podcast-desc {
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: right;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.podcast-pagination button {
+  min-width: 36px;
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 40px;
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  transition: all 0.2s;
+}
+.podcast-pagination button.btn-primary,
+.podcast-pagination button:focus,
+.podcast-pagination button.active {
+  color: #ffd600 !important;
+  background: orange !important;
+  border-color: #fff !important;
+}
+.podcast-pagination button:hover {
+  background: rgba(255, 152, 0, 0.12) !important;
+  color: #ffd600 !important;
+  border-color: #fff !important;
+}
+@media (max-width: 992px) {
+  .podcast-img {
+    height: 180px;
+  }
+}
+@media (max-width: 768px) {
+  .podcast-img {
+    height: 140px;
+  }
+}
+.podcast-img-fixed {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px 16px 0 0;
+  aspect-ratio: 1.3/1;
+  background: #222;
+  display: block;
+}
+@media (max-width: 992px) {
+  .podcast-img-fixed {
+    height: 180px;
+  }
+}
+@media (max-width: 768px) {
+  .podcast-img-fixed {
+    height: 140px;
+  }
+}
+
+@keyframes podcast-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
