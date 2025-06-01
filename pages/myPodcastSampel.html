@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ARTSCAPE</title>
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="podcastHome.css" />
+    <link rel="stylesheet" href="discographySampel.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -116,74 +116,62 @@
         </div>
       </div>
     </nav>
-
-    <!-- hero carousel -->
-    <div class="container-fluid">
-      <div class="hero-background position-relative">
-        <div
-          id="podcastHeroSlider"
-          class="carousel slide"
-          data-bs-ride="carousel"
-          data-bs-interval="5000"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="../images/photo_2025-05-24_11-27-22.jpg"
-                alt="..."
-                class="hero-bg-img"
-              />
-              <div class="hero-caption-box">
-                <h2 class="hero-caption-title">خدمات ما</h2>
-                <p class="hero-caption-text">
-                  جهان بدون عکاسی برای ما مثل دنیای بدون نور است، که ذهن ما را
-                  باز می‌کند و احساسات را بیان می‌کند.
-                </p>
-                <a href="#" class="hero-caption-btn">مشاهده نمونه کارها</a>
-              </div>
-            </div>
-            <!-- اسلایدهای بیشتر به صورت داینامیک با جاوااسکریپت اضافه می‌شوند -->
-          </div>
-          <!-- حذف کنترل‌های اسلایدر، فقط پیجینیشن باقی بماند -->
-        </div>
-      </div>
-    </div>
-    <!-- my podcast -->
-    <div class="container podcast-container mt-5">
-      <div class="my-podcast bg-dark">
+    <!-- disco start -->
+    <div class="container disco-container mt-5">
+      <div class="disco-sampel">
         <div class="row">
-          <div class="pod-left col-12 col-md-6">
+          <div class="discography-img col-12 col-md-6">
             <img
               src="../images/nature-3082832_1280.jpg"
               alt="..."
               class="img-fluid"
             />
           </div>
-          <div class="pod-right col-12 col-md-6">
-            <h1>بیوگرافی من</h1>
-            <h4 class="mt-4">
-              جهان بدون عکاسی برای ما بی معنی است اگر نور و رنگی وجود نداشته
-              باشد که ذهن ما را باز می کند و احساسات را بیان می کند.
-            </h4>
-            <p class="mt-4">
-              سبک من ترکیبی است بین عکاسی تبلیغاتی و عکاسی هنری با لمس مد و
-              روشنایی خلاق. عکس های من از نور، رنگ، تکنیک های پردازش سیاه و
-              سفید، عکس های پرنعمت، چشم انداز خلاق و البته، مهمتر از همه، شخصیت
-              های مردم من عکاسی الهام گرفته اند!
-            </p>
-            <a class="pod-link" href="#">مشاهده بیشتر</a>
+          <div class="discography-text col-12 col-md-6">
+            <h1>آلبوم 1</h1>
+            <p class="date">21 مهر 1397</p>
+            <p>توضیحات آلبوم به صورت داینامیک اینجا قرار می‌گیرد.</p>
+            <ul id="albumFeatures"></ul>
+            <div class="row btn-section">
+              <div class="download-btn col-12 col-md-5">
+                <span class="service-icon apple"
+                  ><i class="fab fa-apple"></i
+                ></span>
+                <button class="btn text-white">
+                  دانلود از <br /><span>اپل موزیک</span>
+                </button>
+              </div>
+              <div class="download-btn col-12 col-md-5">
+                <span class="service-icon youtube"
+                  ><i class="fab fa-youtube"></i
+                ></span>
+                <button class="btn text-white">
+                  دانلود از <br /><span>یوتیوب موزیک</span>
+                </button>
+              </div>
+              <div class="download-btn col-12 col-md-5">
+                <span class="service-icon spotify"
+                  ><i class="fab fa-spotify"></i
+                ></span>
+                <button class="btn text-white">
+                  دانلود از <br /><span>اسپاتیفای</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- podcast-music -->
-    <div class="container music-container mt-5 bg-dark">
+    <!-- musicplayer -->
+    <div class="music-container mt-5 bg-dark">
       <div class="podcast-musics">
         <div class="row">
           <div class="podcast-left col-12 col-md-6">
             <div class="row">
               <div class="music-player col-12">
-                <!-- موزیک پلیر داینامیک -->
+                <div class="album-name text-center mb-2" id="albumName">
+                  آلبوم 1
+                </div>
                 <div class="player-controls">
                   <button id="prevBtn" class="player-btn">
                     <i class="fa fa-backward"></i>
@@ -221,7 +209,6 @@
                 <audio id="audioPlayer" src="" preload="metadata"></audio>
               </div>
               <div class="music-album col-12">
-                <!-- آلبوم موزیک با اسکرول افقی و انیمیشن -->
                 <div class="album-scroll" id="albumScroll">
                   <!-- موزیک‌ها به صورت داینامیک با JS اضافه می‌شوند -->
                 </div>
@@ -239,74 +226,6 @@
             />
           </div>
         </div>
-      </div>
-    </div>
-    <!-- discography -->
-    <div class="container mt-5">
-      <div class="discography">
-        <h1 class="text-right">دیسکوگرافی</h1>
-        <div class="row mt-5">
-          <!-- دیسکوگرافی داینامیک اینجا رندر می‌شود -->
-        </div>
-      </div>
-    </div>
-    <!-- my video -->
-    <div class="container-fluid"></div>
-    <!-- dynamic video section -->
-    <div class="container-fluid my-5">
-      <div
-        class="position-relative w-100"
-        style="cursor: pointer; min-height: 220px"
-        id="videoBanner"
-      >
-        <img
-          src="../images/photo_2025-05-24_11-27-22.jpg"
-          alt="official video"
-          class="w-100 rounded shadow"
-          style="object-fit: cover; max-height: 420px; min-height: 220px"
-        />
-        <div
-          class="video-banner-caption position-absolute top-50 start-50 translate-middle text-center"
-        >
-          <h4 class="fw-bold mb-0">باد شمالی سرد</h4>
-          <p>از اولین ویدیو رسمی ما دیدن کنید</p>
-          <span class="video-play-icon d-inline-block mt-2">
-            <i class="fa-solid fa-circle-play fa-lg"></i>
-          </span>
-        </div>
-      </div>
-      <!-- Video Modal -->
-      <div
-        class="modal fade"
-        id="officialVideoModal"
-        tabindex="-1"
-        aria-labelledby="officialVideoModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content bg-dark">
-            <div class="modal-body p-0">
-              <video
-                id="officialVideo"
-                src="../video/15445977-uhd_3840_2160_30fps (1).mp4"
-                controls
-                style="width: 100%; height: 100%"
-                poster="../images/photo_2025-05-24_11-27-22.jpg"
-              ></video>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end dynamic video section -->
-    <!-- my pods -->
-    <div class="container">
-      <a href="../pages/myPodcastList.html" class="my-podcast-link mb-3">
-        <h1 class="text-right mb-0">پادکست های من</h1>
-        <span class="arrow-anim">&gt;</span>
-      </a>
-      <div class="podcast-list">
-        <div class="row"></div>
       </div>
     </div>
     <!-- shopsectionStarted -->
@@ -353,6 +272,6 @@
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../main.js"></script>
-    <script src="./podcastHome.js"></script>
+    <script src="./discographySampel.js"></script>
   </body>
 </html>

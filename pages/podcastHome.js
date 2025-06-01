@@ -292,48 +292,215 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // --- دیسکوگرافی داینامیک با پیجینیشن ---
   const discographyItems = [
-    // نمونه دیتا، ادمین می‌تواند این آرایه را ویرایش کند
     {
       img: "../images/photo_2025-05-24_11-27-22.jpg",
-      link: "album1.html",
       title: "آلبوم ۱",
+      description:
+        "این آلبوم شامل قطعاتی با الهام از طبیعت و زندگی روزمره است.",
+      musics: [
+        {
+          title: "آسمان آبی",
+          src: "../music/ali sorena - delambaroone.mp3",
+          img: "../images/photo_2025-05-22_15-30-26.jpg",
+        },
+        {
+          title: "طلوع امید",
+          src: "../music/Poori - Ashghal.mp3",
+          img: "../images/photo_2025-05-24_11-27-22.jpg",
+        },
+      ],
+      date: "21 مهر 1397",
+      downloadLinks: {
+        apple: "https://music.apple.com/album1",
+        youtube: "https://music.youtube.com/album1",
+        spotify: "https://open.spotify.com/",
+      },
     },
     {
       img: "../images/photo_2025-05-22_15-30-26.jpg",
-      link: "album2.html",
       title: "آلبوم ۲",
+      description: "ترکیبی از موسیقی مدرن و سنتی با فضایی احساسی.",
+      musics: [
+        {
+          title: "شور زندگی",
+          src: "../music/Reza Pishro - Qabil.mp3",
+          img: "../images/nature-3082832_1280.jpg",
+        },
+        {
+          title: "زندگی نو",
+          src: "../music/SoelChigini - Bagheri_53f32991-c628-4680-bd1d-d1a4aab8d27a.mp3",
+          img: "../images/nature-3082832_1280.jpg",
+        },
+      ],
+      date: "15 آبان 1398",
+      downloadLinks: {
+        apple: "https://music.apple.com/album2",
+        youtube: "https://music.youtube.com/album2",
+        spotify: "https://open.spotify.com/album2",
+      },
     },
     {
       img: "../images/photo_2025-05-22_15-30-33.jpg",
-      link: "album3.html",
       title: "آلبوم ۳",
+      description: "آلبومی با محوریت عشق و امید به آینده.",
+      musics: [
+        {
+          title: "لحظه های ناب",
+          src: "../music/ali sorena - delambaroone.mp3",
+          img: "../images/photo_2025-05-22_15-30-33.jpg",
+        },
+      ],
+      date: "10 دی 1399",
+      downloadLinks: {
+        apple: "https://music.apple.com/album3",
+        youtube: "https://music.youtube.com/album3",
+        spotify: "https://open.spotify.com/album3",
+      },
     },
     {
       img: "../images/nature-3082832_1280.jpg",
-      link: "album4.html",
       title: "آلبوم ۴",
+      description: "منتخبی از قطعات آرامش‌بخش برای لحظات خاص.",
+      musics: [
+        {
+          title: "سکوت شب",
+          src: "../music/Poori - Ashghal.mp3",
+          img: "../images/nature-3082832_1280.jpg",
+        },
+      ],
+      date: "5 فروردین 1400",
+      downloadLinks: {
+        apple: "https://music.apple.com/album4",
+        youtube: "https://music.youtube.com/album4",
+        spotify: "https://open.spotify.com/album4",
+      },
     },
     {
       img: "../images/photo_2025-05-24_11-27-22.jpg",
-      link: "album5.html",
       title: "آلبوم ۵",
+      description: "آلبومی با ریتم‌های تند و انرژی‌بخش برای ورزش و فعالیت.",
+      musics: [
+        {
+          title: "انرژی مثبت",
+          src: "../music/Reza Pishro - Qabil.mp3",
+          img: "../images/photo_2025-05-24_11-27-22.jpg",
+        },
+      ],
+      date: "12 اردیبهشت 1400",
+      downloadLinks: {
+        apple: "https://music.apple.com/album5",
+        youtube: "https://music.youtube.com/album5",
+        spotify: "https://open.spotify.com/album5",
+      },
     },
     {
       img: "../images/photo_2025-05-22_15-30-26.jpg",
-      link: "album6.html",
       title: "آلبوم ۶",
+      description: "مجموعه‌ای از قطعات الهام‌بخش برای شروع روز.",
+      musics: [
+        {
+          title: "صبح تازه",
+          src: "../music/ali sorena - delambaroone.mp3",
+          img: "../images/photo_2025-05-22_15-30-26.jpg",
+        },
+      ],
+      date: "30 خرداد 1400",
+      downloadLinks: {
+        apple: "https://music.apple.com/album6",
+        youtube: "https://music.youtube.com/album6",
+        spotify: "https://open.spotify.com/album6",
+      },
     },
     {
       img: "../images/photo_2025-05-22_15-30-33.jpg",
-      link: "album7.html",
       title: "آلبوم ۷",
+      description: "آلبومی با محوریت خاطرات و گذشته‌های شیرین.",
+      musics: [
+        {
+          title: "یادگاری",
+          src: "../music/Poori - Ashghal.mp3",
+          img: "../images/photo_2025-05-22_15-30-33.jpg",
+        },
+      ],
+      date: "18 تیر 1400",
+      downloadLinks: {
+        apple: "https://music.apple.com/album7",
+        youtube: "https://music.youtube.com/album7",
+        spotify: "https://open.spotify.com/album7",
+      },
     },
     {
       img: "../images/nature-3082832_1280.jpg",
-      link: "album8.html",
       title: "آلبوم ۸",
+      description: "منتخبی از قطعات بی‌کلام برای تمرکز و مطالعه.",
+      musics: [
+        {
+          title: "لحظه آرامش",
+          src: "../music/SoelChigini - Bagheri_53f32991-c628-4680-bd1d-d1a4aab8d27a.mp3",
+          img: "../images/nature-3082832_1280.jpg",
+        },
+      ],
+      date: "2 شهریور 1400",
+      downloadLinks: {
+        apple: "https://music.apple.com/album8",
+        youtube: "https://music.youtube.com/album8",
+        spotify: "https://open.spotify.com/album8",
+      },
     },
-    // ...
+    {
+      img: "../images/photo_2025-05-24_11-27-22.jpg",
+      title: "آلبوم ۹",
+      description: "آلبومی با فضای فانتزی و کودکانه برای خانواده.",
+      musics: [
+        {
+          title: "دنیای رنگی",
+          src: "../music/ali sorena - delambaroone.mp3",
+          img: "../images/photo_2025-05-24_11-27-22.jpg",
+        },
+      ],
+      date: "20 مهر 1400",
+      downloadLinks: {
+        apple: "https://music.apple.com/album9",
+        youtube: "https://music.youtube.com/album9",
+        spotify: "https://open.spotify.com/album9",
+      },
+    },
+    {
+      img: "../images/photo_2025-05-22_15-30-26.jpg",
+      title: "آلبوم ۱۰",
+      description: "مجموعه‌ای از قطعات عاشقانه و احساسی.",
+      musics: [
+        {
+          title: "دل ساده",
+          src: "../music/Poori - Ashghal.mp3",
+          img: "../images/photo_2025-05-22_15-30-26.jpg",
+        },
+      ],
+      date: "1 آبان 1400",
+      downloadLinks: {
+        apple: "https://music.apple.com/album10",
+        youtube: "https://music.youtube.com/album10",
+        spotify: "https://open.spotify.com/album10",
+      },
+    },
+    {
+      img: "../images/photo_2025-05-22_15-30-33.jpg",
+      title: "آلبوم ۱۱",
+      description: "آلبومی با قطعات ویژه برای شب‌های زمستانی.",
+      musics: [
+        {
+          title: "برف و ستاره",
+          src: "../music/Reza Pishro - Qabil.mp3",
+          img: "../images/photo_2025-05-22_15-30-33.jpg",
+        },
+      ],
+      date: "15 آذر 1400",
+      downloadLinks: {
+        apple: "https://music.apple.com/album11",
+        youtube: "https://music.youtube.com/album11",
+        spotify: "https://open.spotify.com/album11",
+      },
+    },
   ];
 
   const itemsPerPage = 6; // 2 ردیف × 3 ستون
@@ -346,14 +513,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const startIdx = (page - 1) * itemsPerPage;
     const endIdx = startIdx + itemsPerPage;
     const pageItems = discographyItems.slice(startIdx, endIdx);
-    pageItems.forEach((item) => {
+    pageItems.forEach((item, idx) => {
       const col = document.createElement("div");
       col.className = "disc col-12 col-sm-6 col-md-4 mb-4";
       col.innerHTML = `
-        <a href="${item.link}" class="disc-link">
+        <a href="discographySampel.html" class="disc-link">
           <img src="${item.img}" alt="${item.title}" class="img-fluid rounded shadow" />
         </a>
       `;
+      // رویداد کلیک برای ارسال اطلاعات به localStorage
+      col.querySelector(".disc-link").addEventListener("click", function (e) {
+        localStorage.setItem("selectedAlbum", JSON.stringify(item));
+      });
       discRow.appendChild(col);
     });
   }
@@ -421,37 +592,37 @@ document.addEventListener("DOMContentLoaded", function () {
       img: "../images/photo_2025-05-24_11-27-22.jpg",
       link: "podcast1.html",
       title: "پادکست ۱",
-      date: "۱۴۰۴/۰۳/۰۱"
+      date: "۱۴۰۴/۰۳/۰۱",
     },
     {
       img: "../images/photo_2025-05-22_15-30-26.jpg",
       link: "podcast2.html",
       title: "پادکست ۲",
-      date: "۱۴۰۴/۰۳/۰۲"
+      date: "۱۴۰۴/۰۳/۰۲",
     },
     {
       img: "../images/photo_2025-05-22_15-30-33.jpg",
       link: "podcast3.html",
       title: "پادکست ۳",
-      date: "۱۴۰۴/۰۳/۰۳"
+      date: "۱۴۰۴/۰۳/۰۳",
     },
     {
       img: "../images/nature-3082832_1280.jpg",
       link: "podcast4.html",
       title: "پادکست ۴",
-      date: "۱۴۰۴/۰۳/۰۴"
+      date: "۱۴۰۴/۰۳/۰۴",
     },
     {
       img: "../images/photo_2025-05-24_11-27-22.jpg",
       link: "podcast5.html",
       title: "پادکست ۵",
-      date: "۱۴۰۴/۰۳/۰۵"
+      date: "۱۴۰۴/۰۳/۰۵",
     },
     {
       img: "../images/photo_2025-05-22_15-30-26.jpg",
       link: "podcast6.html",
       title: "پادکست ۶",
-      date: "۱۴۰۴/۰۳/۰۶"
+      date: "۱۴۰۴/۰۳/۰۶",
     },
     // ...
   ];
@@ -468,15 +639,21 @@ document.addEventListener("DOMContentLoaded", function () {
     pageItems.forEach((item, idx) => {
       const col = document.createElement("div");
       col.className = "col-12 col-sm-6 col-md-4 mb-4";
-      col.style.animationDelay = (idx * 0.12) + 's';
+      col.style.animationDelay = idx * 0.12 + "s";
       col.innerHTML = `
         <div class="podcast-card bg-dark rounded shadow h-100 d-flex flex-column podcast-fade">
           <a href="${item.link}" class="d-block podcast-img-link">
-            <img src="${item.img}" alt="${item.title}" class="img-fluid rounded-top podcast-img podcast-img-fixed" />
+            <img src="${item.img}" alt="${
+        item.title
+      }" class="img-fluid rounded-top podcast-img podcast-img-fixed" />
           </a>
           <div class="p-3 flex-grow-1 d-flex flex-column justify-content-end">
             <h5 class="podcast-title">${toPersianDigits(item.title)}</h5>
-            <p class="podcast-desc mb-0">${item.date ? toPersianDigits(item.date) : toPersianDigits("۱۴۰۴/۰۳/۱۰")}</p>
+            <p class="podcast-desc mb-0">${
+              item.date
+                ? toPersianDigits(item.date)
+                : toPersianDigits("۱۴۰۴/۰۳/۱۰")
+            }</p>
           </div>
         </div>
       `;
@@ -492,7 +669,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalPages = Math.ceil(podcastItems.length / podcastPerPage);
     if (totalPages <= 1) return;
     pagination = document.createElement("div");
-    pagination.className = "podcast-pagination d-flex justify-content-center mt-3";
+    pagination.className =
+      "podcast-pagination d-flex justify-content-center mt-3";
     for (let i = 1; i <= totalPages; i++) {
       const btn = document.createElement("button");
       btn.className =
