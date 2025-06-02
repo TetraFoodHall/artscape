@@ -2,47 +2,156 @@
 const podcastItems = [
   {
     img: "../images/photo_2025-05-24_11-27-22.jpg",
-    link: "podcast1.html",
     title: "پادکست ۱",
     date: "۱۴۰۴/۰۳/۰۱",
     category: "استودیو",
+    caption: "این یک کپشن نمونه برای پادکست ۱ است.",
+    description: "توضیحات کامل درباره پادکست ۱ و موضوعات آن.",
+    downloadLinks: {
+      apple: "https://music.apple.com/podcast1",
+      youtube: "https://music.youtube.com/podcast1",
+      spotify: "https://open.spotify.com/podcast1",
+    },
+    features: ["ویژگی ۱", "ویژگی ۲", "ویژگی ۳"],
+    musics: [
+      {
+        title: "آهنگ اول پادکست 3۱",
+        src: "../music/ali sorena - delambaroone.mp3",
+        img: "../images/photo_2025-05-22_15-30-26.jpg",
+      },
+      {
+        title: "آهنگ دوم پادکست 2۱",
+        src: "../music/Poori - Ashghal.mp3",
+        img: "../images/photo_2025-05-24_11-27-22.jpg",
+      },
+      {
+        title: "آهنگ دوم پادکست ۱",
+        src: "../music/Poori - Ashghal.mp3",
+        img: "../images/photo_2025-05-24_11-27-22.jpg",
+      },
+      {
+        title: "آهنگ دوم پادکست ۱",
+        src: "../music/Poori - Ashghal.mp3",
+        img: "../images/photo_2025-05-24_11-27-22.jpg",
+      },
+      {
+        title: "آهنگ دوم پادکست ۱",
+        src: "../music/Poori - Ashghal.mp3",
+        img: "../images/photo_2025-05-24_11-27-22.jpg",
+      },
+      {
+        title: "آهنگ دوم پادکست ۱",
+        src: "../music/Poori - Ashghal.mp3",
+        img: "../images/photo_2025-05-24_11-27-22.jpg",
+      },
+    ],
   },
   {
     img: "../images/photo_2025-05-22_15-30-26.jpg",
-    link: "podcast2.html",
     title: "پادکست ۲",
     date: "۱۴۰۴/۰۳/۰۲",
     category: "سبک زندگی",
+    caption: "کپشن اختصاصی برای پادکست ۲.",
+    description: "توضیحات کامل درباره پادکست ۲.",
+    downloadLinks: {
+      apple: "https://music.apple.com/podcast2",
+      youtube: "https://music.youtube.com/podcast2",
+      spotify: "https://open.spotify.com/podcast2",
+    },
+    features: ["ویژگی A", "ویژگی B"],
+    musics: [
+      {
+        title: "آهنگ ویژه پادکست ۲",
+        src: "../music/Reza Pishro - Qabil.mp3",
+        img: "../images/nature-3082832_1280.jpg",
+      },
+    ],
   },
   {
     img: "../images/photo_2025-05-22_15-30-33.jpg",
-    link: "podcast3.html",
     title: "پادکست ۳",
     date: "۱۴۰۴/۰۳/۰۳",
     category: "طبیعت",
+    caption: "کپشن پادکست ۳",
+    description: "توضیحات پادکست ۳ و جزئیات آن.",
+    downloadLinks: {
+      apple: "https://music.apple.com/podcast3",
+      youtube: "https://music.youtube.com/podcast3",
+      spotify: "https://open.spotify.com/podcast3",
+    },
+    features: ["ویژگی ۱", "ویژگی ۲"],
+    musics: [
+      {
+        title: "آهنگ اول پادکست ۳",
+        src: "../music/artist1 - song1.mp3",
+        img: "../images/photo_2025-05-22_15-30-33.jpg",
+      },
+    ],
   },
   {
     img: "../images/nature-3082832_1280.jpg",
-    link: "podcast4.html",
     title: "پادکست ۴",
     date: "۱۴۰۴/۰۳/۰۴",
     category: "فشن و مد",
+    caption: "کپشن پادکست ۴",
+    description: "توضیحات پادکست ۴ و جزئیات آن.",
+    downloadLinks: {
+      apple: "https://music.apple.com/podcast4",
+      youtube: "https://music.youtube.com/podcast4",
+      spotify: "https://open.spotify.com/podcast4",
+    },
+    features: ["ویژگی ۱", "ویژگی ۲", "ویژگی ۳"],
+    musics: [
+      {
+        title: "آهنگ اول پادکست ۴",
+        src: "../music/artist2 - song2.mp3",
+        img: "../images/nature-3082832_1280.jpg",
+      },
+    ],
   },
   {
     img: "../images/photo_2025-05-24_11-27-22.jpg",
-    link: "podcast5.html",
     title: "پادکست ۵",
     date: "۱۴۰۴/۰۳/۰۵",
     category: "موزیک",
+    caption: "کپشن پادکست ۵",
+    description: "توضیحات پادکست ۵ و جزئیات آن.",
+    downloadLinks: {
+      apple: "https://music.apple.com/podcast5",
+      youtube: "https://music.youtube.com/podcast5",
+      spotify: "https://open.spotify.com/podcast5",
+    },
+    features: ["ویژگی ۱", "ویژگی ۲"],
+    musics: [
+      {
+        title: "آهنگ اول پادکست ۵",
+        src: "../music/artist3 - song3.mp3",
+        img: "../images/photo_2025-05-24_11-27-22.jpg",
+      },
+    ],
   },
   {
     img: "../images/photo_2025-05-22_15-30-26.jpg",
-    link: "podcast6.html",
     title: "پادکست ۶",
     date: "۱۴۰۴/۰۳/۰۶",
     category: "پرتره",
+    caption: "کپشن پادکست ۶",
+    description: "توضیحات پادکست ۶ و جزئیات آن.",
+    downloadLinks: {
+      apple: "https://music.apple.com/podcast6",
+      youtube: "https://music.youtube.com/podcast6",
+      spotify: "https://open.spotify.com/podcast6",
+    },
+    features: ["ویژگی ۱", "ویژگی ۲", "ویژگی ۳"],
+    musics: [
+      {
+        title: "آهنگ اول پادکست ۶",
+        src: "../music/artist4 - song4.mp3",
+        img: "../images/photo_2025-05-22_15-30-26.jpg",
+      },
+    ],
   },
-  // ... سایر پادکست‌ها با دسته‌بندی‌های مختلف یا تکراری ...
+  // ... سایر پادکست‌ها با همین ساختار ...
 ];
 const podcastPerPage = 12;
 let currentPodcastPage = 1;
@@ -117,7 +226,7 @@ function renderPodcastPage(page = 1) {
     col.style.animationDelay = idx * 0.12 + "s";
     col.innerHTML = `
       <div class="podcast-card bg-dark rounded shadow h-100 d-flex flex-column podcast-fade">
-        <a href="${item.link}" class="d-block podcast-img-link">
+        <a href="myPodcastSampel.html" class="d-block podcast-img-link podcast-dynamic-link">
           <img src="${item.img}" alt="${item.title}" class="img-fluid rounded-top podcast-img podcast-img-fixed" />
         </a>
         <div class="p-3 flex-grow-1 d-flex flex-column justify-content-end">
@@ -130,6 +239,10 @@ function renderPodcastPage(page = 1) {
         </div>
       </div>
     `;
+    // Save podcast info to localStorage on click
+    col.querySelector(".podcast-dynamic-link").addEventListener("click", function (e) {
+      localStorage.setItem("selectedPodcast", JSON.stringify(item));
+    });
     podcastRow.appendChild(col);
   });
 }

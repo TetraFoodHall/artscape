@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // انیمیشن فید برای باکس متن اسلایدر هنگام تغییر اسلاید (سینک با پیجینیشن)
+  // انیمیشن فید برای باکس متن اسلایدرا هنگام تغییر اسلاید (سینک با پیجینیشن)
   const heroSlider = document.getElementById("podcastHeroSlider");
   if (heroSlider) {
     // هر بار اسلاید عوض شد، فقط باکس متن اسلاید فعال fade-in بگیرد
@@ -642,10 +642,8 @@ document.addEventListener("DOMContentLoaded", function () {
       col.style.animationDelay = idx * 0.12 + "s";
       col.innerHTML = `
         <div class="podcast-card bg-dark rounded shadow h-100 d-flex flex-column podcast-fade">
-          <a href="${item.link}" class="d-block podcast-img-link">
-            <img src="${item.img}" alt="${
-        item.title
-      }" class="img-fluid rounded-top podcast-img podcast-img-fixed" />
+          <a href="myPodcastSampel.html" class="d-block podcast-img-link podcast-dynamic-link">
+            <img src="${item.img}" alt="${item.title}" class="img-fluid rounded-top podcast-img podcast-img-fixed" />
           </a>
           <div class="p-3 flex-grow-1 d-flex flex-column justify-content-end">
             <h5 class="podcast-title">${toPersianDigits(item.title)}</h5>
@@ -657,6 +655,10 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
       `;
+      // Save podcast info to localStorage on click
+      col.querySelector(".podcast-dynamic-link").addEventListener("click", function (e) {
+        localStorage.setItem("selectedPodcast", JSON.stringify(item));
+      });
       podcastRow.appendChild(col);
     });
   }
