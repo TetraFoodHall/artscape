@@ -1,0 +1,52 @@
+.header-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.header-container {
+  margin-top: 5rem;
+}
+.header-img img {
+  width: 100%;
+  height: 100%;
+}
+.caption {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.header-title h1 {
+  font-weight: bold;
+}
+.header-title h1::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+}
+.header-title p {
+  color: orange;
+}
+.caption p {
+  border-bottom: 1px solid #525252;
+  padding-bottom: 1rem;
+}
+.like-section .fa-heart {
+  transition: color 0.2s;
+  margin-left: 10px;
+  margin-right: 4px;
+}
+.like-section.liked .fa-heart {
+  color: #e53935 !important;
+}
+.like-count-badge {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-left: 4px;
+  margin-right: 4px;
+}
