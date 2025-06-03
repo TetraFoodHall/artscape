@@ -3,14 +3,14 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 90vw;
 }
 .header-container {
   margin-top: 5rem;
 }
 .header-img img {
   width: 100%;
-  height: 100%;
+  height: 90vw;
 }
 .caption {
   font-weight: bold;

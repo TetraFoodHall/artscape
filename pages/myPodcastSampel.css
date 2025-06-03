@@ -112,4 +112,17 @@
     width: 180px;
     height: 180px;
   }
+  .podcast-right {
+    height: 200px;
+    min-height: 200px;
+  }
+}
+
+.podcast-right {
+  height: 540px;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }

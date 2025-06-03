@@ -4,88 +4,184 @@ const videoSamples = [
     src: "../images/photo_2025-05-22_15-30-26.jpg",
     category: "صنعتی",
     video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
   {
     src: "../images/photo_2025-05-22_15-30-33.jpg",
     category: "تیزر تبلیغاتی",
     video: "../video/heZ7PSdsLD.mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
   {
     src: "../images/photo_2025-05-24_11-27-22.jpg",
     category: "مراسم",
     video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
   {
     src: "../images/photo_2025-05-24_11-27-22.jpg",
     category: "مراسم",
     video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
   {
     src: "../images/photo_2025-05-24_11-27-22.jpg",
     category: "مراسم",
     video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
   {
     src: "../images/photo_2025-05-24_11-27-22.jpg",
     category: "مراسم",
     video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
   {
     src: "../images/photo_2025-05-24_11-27-22.jpg",
     category: "مراسم",
     video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
   {
     src: "../images/photo_2025-05-24_11-27-22.jpg",
     category: "مراسم",
     video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
   {
     src: "../images/photo_2025-05-24_11-27-22.jpg",
     category: "مراسم",
     video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
   {
     src: "../images/photo_2025-05-24_11-27-22.jpg",
     category: "مراسم",
     video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
   {
     src: "../images/photo_2025-05-24_11-27-22.jpg",
     category: "مراسم",
     video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
   {
     src: "../images/photo_2025-05-24_11-27-22.jpg",
     category: "مراسم",
     video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
   {
     src: "../images/photo_2025-05-24_11-27-22.jpg",
     category: "مراسم",
     video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
   {
     src: "../images/photo_2025-05-24_11-27-22.jpg",
     category: "مراسم",
     video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
   {
     src: "../images/photo_2025-05-24_11-27-22.jpg",
     category: "مراسم",
     video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
   {
     src: "../images/photo_2025-05-24_11-27-22.jpg",
     category: "مراسم",
     video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "مراسم",
+    video: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
+    desc: "فیلمبرداری صنعتی با کیفیت بالا و نورپردازی حرفه‌ای.",
   },
 ];
 
 const videoSampleItemsContainer = document.querySelector(".sampel-items");
 const videoFilterNav = document.querySelectorAll(".sampel-navbar ul li");
+let lastFilter = "همه";
 
 function renderVideoSamples(filter) {
+  lastFilter = filter;
   let filtered =
     filter === "همه"
       ? videoSamples
@@ -111,28 +207,19 @@ function renderVideoSamples(filter) {
   addVideoSampleClickHandlers();
 }
 
-function addVideoSampleClickHandlers() {
-  document.querySelectorAll(".play-video-btn").forEach((btn) => {
-    btn.onclick = function (e) {
-      e.stopPropagation();
-      const videoSrc = this.getAttribute("data-video");
-      showVideoModal(videoSrc);
-    };
-  });
-}
-
-function showVideoModal(videoSrc) {
+function showVideoModal(videoSrc, sampleData) {
   let modal = document.getElementById("video-sample-modal");
   if (!modal) {
     modal = document.createElement("div");
     modal.id = "video-sample-modal";
     modal.innerHTML = `
       <div class="modal-backdrop" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.85);z-index:9999;"></div>
-      <div class="modal-content" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10000;max-width:90vw;max-height:80vh;">
+      <div class="modal-content" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10000;max-width:90vw;max-height:80vh;display:flex;flex-direction:column;align-items:center;">
         <button class="modal-close" style="position:absolute;top:-32px;left:0;background:transparent;border:none;border-radius:50%;width:36px;height:36px;font-size:1.5rem;z-index:2;cursor:pointer;color:#fff;">&times;</button>
-        <video controls autoplay style="width:100%;height:60vh;max-width:90vw;background:#000;border-radius:12px;">
-          <source src="${videoSrc}" type="video/mp4" />
-        </video>
+        <video controls autoplay style="width:100%;height:60vh;max-width:90vw;background:#000;border-radius:12px;"><source src="${videoSrc}" type="video/mp4" /></video>
+        <a href="#" class="view-sample-link" style="margin-top:18px;font-size:1.1rem;font-weight:bold;color:orange;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+          مشاهده نمونه کار <i class='fa-solid fa-arrow-left' style='font-size:1em;color:orange;'></i>
+        </a>
       </div>
     `;
     document.body.appendChild(modal);
@@ -143,6 +230,41 @@ function showVideoModal(videoSrc) {
   }
   modal.querySelector(".modal-close").onclick = () => modal.remove();
   modal.querySelector(".modal-backdrop").onclick = () => modal.remove();
+  // اضافه کردن رویداد کلیک به دکمه مشاهده نمونه کار
+  const viewSampleBtn = modal.querySelector(".view-sample-link");
+  if (viewSampleBtn) {
+    viewSampleBtn.onclick = function (e) {
+      e.preventDefault();
+      // انتقال اطلاعات نمونه کار به localStorage و رفتن به صفحه جدید
+      if (sampleData) {
+        const data = {
+          src: sampleData.src,
+          video: sampleData.video,
+          desc: sampleData.desc || "",
+          index: sampleData.index || "",
+          date: new Date().toLocaleDateString("fa-IR"),
+        };
+        localStorage.setItem("selectedVideoSample", JSON.stringify(data));
+      }
+      window.location.href = "videoGraphySampel.html";
+    };
+  }
+}
+
+function addVideoSampleClickHandlers() {
+  document.querySelectorAll(".play-video-btn").forEach((btn, idx) => {
+    btn.onclick = function (e) {
+      e.stopPropagation();
+      const videoSrc = this.getAttribute("data-video");
+      // پیدا کردن اطلاعات نمونه کار مربوط به این دکمه
+      let filtered =
+        lastFilter === "همه"
+          ? videoSamples
+          : videoSamples.filter((item) => item.category === lastFilter);
+      const sampleData = filtered[idx];
+      showVideoModal(videoSrc, sampleData);
+    };
+  });
 }
 
 videoFilterNav.forEach((li) => {
@@ -382,8 +504,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const aboutTabs = [
     {
       title: "سبک کاری ما",
-      text:
-        "سبک من ترکیبی است بین عکاسی تبلیغاتی و عکاسی هنری با لمس مد و روشنایی خلاق. عکس های من از نور، رنگ، تکنیک های پردازش سیاه و سفید، عکس های پرنعمت، چشم انداز خلاق و البته، مهمتر از همه، شخصیت های مردم من عکاسی الهام گرفته اند!",
+      text: "سبک من ترکیبی است بین عکاسی تبلیغاتی و عکاسی هنری با لمس مد و روشنایی خلاق. عکس های من از نور، رنگ، تکنیک های پردازش سیاه و سفید، عکس های پرنعمت، چشم انداز خلاق و البته، مهمتر از همه، شخصیت های مردم من عکاسی الهام گرفته اند!",
       features: [
         {
           icon: "<i class='fa-solid fa-camera fa-2xl' style='color: #ac8a11'></i>",
@@ -400,8 +521,7 @@ window.addEventListener("DOMContentLoaded", function () {
     },
     {
       title: "ماموریت های ما",
-      text:
-        "ماموریت ما ارائه بهترین خدمات فیلمبرداری و عکاسی با بالاترین کیفیت و خلاقیت است تا رضایت کامل مشتریان را جلب کنیم.",
+      text: "ماموریت ما ارائه بهترین خدمات فیلمبرداری و عکاسی با بالاترین کیفیت و خلاقیت است تا رضایت کامل مشتریان را جلب کنیم.",
       features: [
         {
           icon: "<i class='fa-solid fa-bolt fa-2xl' style='color: #ac8a11'></i>",
@@ -418,8 +538,7 @@ window.addEventListener("DOMContentLoaded", function () {
     },
     {
       title: "چشم انداز ما",
-      text:
-        "چشم انداز ما تبدیل شدن به یکی از برترین استودیوهای خلاق در زمینه فیلمبرداری و عکاسی در سطح کشور است.",
+      text: "چشم انداز ما تبدیل شدن به یکی از برترین استودیوهای خلاق در زمینه فیلمبرداری و عکاسی در سطح کشور است.",
       features: [
         {
           icon: "<i class='fa-solid fa-star fa-2xl' style='color: #ac8a11'></i>",

@@ -1,47 +1,130 @@
 // داینامیک ساختن نمونه کارها
 const sampleImages = [
-  { src: "../images/photo_2025-05-22_15-30-26.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-22_15-30-33.jpg", category: "سبک زندگی" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "طبیعت" },
-  { src: "../images/photo_2025-05-22_15-30-26.jpg", category: "فشن و مد" },
-  { src: "../images/photo_2025-05-22_15-30-33.jpg", category: "پرتره" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/photo_2025-05-24_11-27-22.jpg", category: "استودیو" },
-  { src: "../images/nature-3082832_1280.jpg", category: "استودیو" },
+  {
+    src: "../images/photo_2025-05-22_15-30-26.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-22_15-30-33.jpg",
+    category: "سبک زندگی",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "طبیعت",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-22_15-30-26.jpg",
+    category: "فشن و مد",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-22_15-30-33.jpg",
+    category: "پرتره",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/photo_2025-05-24_11-27-22.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
+  {
+    src: "../images/nature-3082832_1280.jpg",
+    category: "استودیو",
+    desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
+  },
 ];
 
 const sampleItemsContainer = document.querySelector(".sampel-items");
@@ -149,25 +232,25 @@ function createImageModal(images, startIdx) {
 
   // Helper functions for like system
   function getLikes(src) {
-    const likes = JSON.parse(localStorage.getItem("sampleLikes") || '{}');
+    const likes = JSON.parse(localStorage.getItem("sampleLikes") || "{}");
     return likes[src] || 0;
   }
   function setLikes(src, count) {
-    const likes = JSON.parse(localStorage.getItem("sampleLikes") || '{}');
+    const likes = JSON.parse(localStorage.getItem("sampleLikes") || "{}");
     likes[src] = count;
     localStorage.setItem("sampleLikes", JSON.stringify(likes));
   }
   function hasLiked(src) {
-    const liked = JSON.parse(localStorage.getItem("sampleLiked") || '{}');
+    const liked = JSON.parse(localStorage.getItem("sampleLiked") || "{}");
     return !!liked[src];
   }
   function setLiked(src) {
-    const liked = JSON.parse(localStorage.getItem("sampleLiked") || '{}');
+    const liked = JSON.parse(localStorage.getItem("sampleLiked") || "{}");
     liked[src] = true;
     localStorage.setItem("sampleLiked", JSON.stringify(liked));
   }
   function setUnliked(src) {
-    const liked = JSON.parse(localStorage.getItem("sampleLiked") || '{}');
+    const liked = JSON.parse(localStorage.getItem("sampleLiked") || "{}");
     delete liked[src];
     localStorage.setItem("sampleLiked", JSON.stringify(liked));
   }
@@ -176,9 +259,11 @@ function createImageModal(images, startIdx) {
     const likeCount = getLikes(src);
     const liked = hasLiked(src);
     return `
-      <button class="like-btn${liked ? ' liked' : ''}" title="لایک">
+      <button class="like-btn${liked ? " liked" : ""}" title="لایک">
         <span class="like-count">${toPersianNumber(likeCount)}</span>
-        <svg class="like-heart" viewBox="0 0 24 24" fill="${liked ? 'orange' : 'none'}" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 4 13.36 4 8.5C4 5.42 6.42 3 9.5 3C11.24 3 12.91 3.81 14 5.08C15.09 3.81 16.76 3 18.5 3C21.58 3 24 5.42 24 8.5C24 13.36 16 21 16 21H12Z"/></svg>
+        <svg class="like-heart" viewBox="0 0 24 24" fill="${
+          liked ? "orange" : "none"
+        }" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 4 13.36 4 8.5C4 5.42 6.42 3 9.5 3C11.24 3 12.91 3.81 14 5.08C15.09 3.81 16.76 3 18.5 3C21.58 3 24 5.42 24 8.5C24 13.36 16 21 16 21H12Z"/></svg>
         <span style="font-size:1em; font-weight:bold; color:orange;">لایک</span>
       </button>
     `;
@@ -192,20 +277,27 @@ function createImageModal(images, startIdx) {
       <img src="${images[currentIdx].src}" class="modal-img" />
       <button class="modal-arrow modal-arrow-left">&#8594;</button>
       <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin: 10px 0; font-weight: bold; font-size: 1.1em;">
-        <div class="modal-counter">${toPersianNumber(currentIdx + 1)} / ${toPersianNumber(images.length)}</div>
-        <a class="modal-link" href="/pages/sample${currentIdx + 1}.html" style="white-space: nowrap; font-weight: normal; font-size: 0.95em;">مشاهده نمونه کار</a>
-        <div class="like-section">${renderLikeSection(images[currentIdx].src)}</div>
+        <div class="modal-counter">${toPersianNumber(
+          currentIdx + 1
+        )} / ${toPersianNumber(images.length)}</div>
+        <a class="modal-link" href="#" id="viewSampleBtn" style="white-space: nowrap; font-weight: normal; font-size: 0.95em;">مشاهده نمونه کار</a>
+        <div class="like-section">${renderLikeSection(
+          images[currentIdx].src
+        )}</div>
       </div>
+      <div class="modal-desc mt-3" style="text-align:right; color:#444; font-size:1em;">${
+        images[currentIdx].desc || ""
+      }</div>
     </div>
   `;
   document.body.appendChild(modal);
 
   // Like button event
   function updateLikeBtn() {
-    const likeSection = modal.querySelector('.like-section');
+    const likeSection = modal.querySelector(".like-section");
     likeSection.innerHTML = renderLikeSection(images[currentIdx].src);
-    const likeBtn = likeSection.querySelector('.like-btn');
-    likeBtn.onclick = function() {
+    const likeBtn = likeSection.querySelector(".like-btn");
+    likeBtn.onclick = function () {
       const src = images[currentIdx].src;
       let count = getLikes(src);
       if (hasLiked(src)) {
@@ -229,7 +321,9 @@ function createImageModal(images, startIdx) {
   // Helper to update modal content
   function updateModalContent() {
     modal.querySelector(".modal-img").src = images[currentIdx].src;
-    modal.querySelector(".modal-link").href = `/pages/sample${currentIdx + 1}.html`;
+    modal.querySelector(".modal-link").href = `/pages/sample${
+      currentIdx + 1
+    }.html`;
     modal.querySelector(".modal-counter").textContent = `${toPersianNumber(
       currentIdx + 1
     )} / ${toPersianNumber(images.length)}`;
@@ -247,16 +341,34 @@ function createImageModal(images, startIdx) {
     currentIdx = (currentIdx + 1) % images.length;
     updateModalContent();
   };
+
+  // انتقال اطلاعات به صفحه photographySampel.html
+  modal.querySelector("#viewSampleBtn").onclick = (e) => {
+    e.preventDefault();
+    const data = {
+      src: images[currentIdx].src,
+      desc: images[currentIdx].desc,
+      index: currentIdx + 1,
+      date: new Date().toLocaleDateString("fa-IR"),
+    };
+    localStorage.setItem("selectedPhotoSample", JSON.stringify(data));
+    window.location.href = "photographySampel.html";
+  };
 }
 
 // اضافه کردن رویداد کلیک به هر عکس
 function addSampleClickHandlers() {
   // فقط عکس‌های قابل مشاهده در صفحه فعلی را انتخاب کن
-  const visibleImgs = document.querySelectorAll('.sample-item-wrapper .sample-img');
+  const visibleImgs = document.querySelectorAll(
+    ".sample-item-wrapper .sample-img"
+  );
   visibleImgs.forEach((img, idx) => {
     img.onclick = () => {
       // فقط آیتم‌های صفحه فعلی را به مدال بده
-      const filtered = lastFilter === 'همه' ? sampleImages : sampleImages.filter(img => img.category === lastFilter);
+      const filtered =
+        lastFilter === "همه"
+          ? sampleImages
+          : sampleImages.filter((img) => img.category === lastFilter);
       const startIdx = (currentPage - 1) * ITEMS_PER_PAGE;
       const paged = filtered.slice(startIdx, startIdx + ITEMS_PER_PAGE);
       createImageModal(paged, idx);
