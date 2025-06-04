@@ -322,6 +322,12 @@
 .range-section .range-value {
   display: none;
 }
+
+.personal-right img {
+  width: 100vh;
+  height: 100vh;
+  object-fit: cover;
+}
 .personal-left {
   font-weight: bold;
   padding-top: 5rem;

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARTSCAPE</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="productSampel.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/eec696899d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="loading-overlay">
+      <video
+        src="video/heZ7PSdsLD.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+        style="
+          width: 180px;
+          height: 180px;
+          object-fit: cover;
+          border-radius: 50%;
+          box-shadow: 0 0 32px orange;
+        "
+      ></video>
+    </div>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">ARTSCAPE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#myNavbar"
+          aria-controls="myNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link main-page" href="../index.html">صفحه اصلی</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shopSection.html">فروشگاه</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="services.html"
+                id="servicesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >خدمات</a
+              >
+              <ul
+                class="dropdown-menu text-end"
+                aria-labelledby="servicesDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="./services.html"
+                    >خدمات آرت اسکیپ</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="photography.html"
+                    >نمونه کار عکاسی</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="videography.html"
+                    >نمونه کار فیلمبرداری</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./podcastHome.html">پادکست</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">گالری</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">وبلاگ</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">حساب کاربری من</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i
+                  class="fa-solid fa-basket-shopping fa-xl"
+                  style="color: #ffffff"
+                ></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i
+                  class="fa-solid fa-magnifying-glass fa-xl"
+                  style="color: #ffffff"
+                ></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- product start -->
+    <div class="container product-container">
+      <div class="product-section">
+        <div class="row">
+          <div class="product-img col-12 col-md-6">
+            <img
+              src="../images/nature-3082832_1280.jpg"
+              alt="..."
+              class="img-fluid main-product-img"
+            />
+            <div class="product-thumbnails mt-3 d-flex gap-2">
+              <img
+                src="../images/nature-3082832_1280.jpg"
+                class="img-thumbnail thumb-img"
+                style="width: 70px; height: 70px; object-fit: cover; cursor: pointer;"
+                alt="thumb1"
+              />
+              <img
+                src="../images/photo_2025-05-22_15-30-26.jpg"
+                class="img-thumbnail thumb-img"
+                style="width: 70px; height: 70px; object-fit: cover; cursor: pointer;"
+                alt="thumb2"
+              />
+              <img
+                src="../images/photo_2025-05-22_15-30-33.jpg"
+                class="img-thumbnail thumb-img"
+                style="width: 70px; height: 70px; object-fit: cover; cursor: pointer;"
+                alt="thumb3"
+              />
+              <img
+                src="../images/photo_2025-05-24_11-27-22.jpg"
+                class="img-thumbnail thumb-img"
+                style="width: 70px; height: 70px; object-fit: cover; cursor: pointer;"
+                alt="thumb4"
+              />
+            </div>
+          </div>
+          <div class="product-caption col-12 col-md-6">
+            <p class="text-right">پرتره</p>
+            <h2>محصول 1</h2>
+            <section class="product-price d-flex justify-content-between mt-4">
+              <span id="price">90تومان</span>
+              <span id="is-availbe">موجود</span>
+            </section>
+            <p class="mt-4">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+              جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+              طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
+              فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری
+              موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد
+              نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل
+              دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            </p>
+            <section class="product-features">
+              <div class="row align-items-center justify-content-center">
+                <div class="feature feature-1 col-12 col-xl-6">
+                  <i
+                    class="fa-solid fa-truck fa-lg ms-2"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  <span>ارسال رایگان</span>
+                </div>
+                <div class="feature col-12 col-xl-6">
+                  <i
+                    class="fa-solid fa-rotate-left fa-lg ms-2"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  <span>ضمانت بازگشت</span>
+                </div>
+                <div class="feature col-12 col-xl-6 d-flex">
+                  <i
+                    class="fa-solid fa-percent fa-lg ms-2"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  <span>تخفیفات ویژه و جذاب</span>
+                </div>
+                <div class="col-12 col-xl-6 d-flex justify-content-between">
+                  <span class="mt-2">تعداد</span>
+                  <div
+                    class="quantity-selector"
+                    style="
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      gap: 0;
+                      background: #222;
+                      border-radius: 8px;
+                      width: 110px;
+                      height: 40px;
+                    "
+                  >
+                    <button
+                      type="button"
+                      class="quantity-btn"
+                      id="decrease-qty"
+                      style="
+                        background: none;
+                        border: none;
+                        color: orange;
+                        font-size: 1.2rem;
+                        width: 32px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      "
+                    >
+                      &#8595;
+                    </button>
+                    <span
+                      id="quantity-value"
+                      style="
+                        width: 32px;
+                        text-align: center;
+                        color: orange;
+                        font-size: 1.1rem;
+                      "
+                    >
+                      1
+                    </span>
+                    <button
+                      type="button"
+                      class="quantity-btn"
+                      id="increase-qty"
+                      style="
+                        background: none;
+                        border: none;
+                        color: orange;
+                        font-size: 1.2rem;
+                        width: 32px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      "
+                    >
+                      &#8593;
+                    </button>
+                  </div>
+                  <button class="produc-btn">افزودن به سبد خرید</button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid p-0">
+      <div class="product-description mt-5">
+        <div
+          class="description-header bg-dark text-white p-3 d-flex justify-content-start align-items-center"
+        >
+          <div
+            class="description-section tab-btn active"
+            style="cursor: pointer"
+          >
+            توضیحات
+          </div>
+          <div class="comments-section tab-btn" style="cursor: pointer">
+            نظرات<span>(0)</span>
+          </div>
+        </div>
+        <div class="tab-content mt-3">
+          <div class="tab-pane description-pane active">
+            <div class="container" id="description-content">
+              <!-- محتوای توضیحات به صورت داینامیک اینجا قرار می‌گیرد -->
+            </div>
+          </div>
+          <div class="tab-pane comments-pane">
+            <div class="container" id="comments-content">
+              <h1>نقد و بررسی</h1>
+              <div class="comments"></div>
+              <!-- فرم ثبت نظر کاربران -->
+              <div class="container comments-container mt-5">
+                <h2>یک دیدگاه بگذارید</h2>
+                <form id="commentForm" class="mt-4" style="max-width: 600px">
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      name="name"
+                      placeholder="نام خود را وارد کنید"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="ایمیل خود را وارد کنید"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <textarea
+                      class="form-control"
+                      id="comment"
+                      name="comment"
+                      rows="4"
+                      required
+                      placeholder="دیدگاه خود را وارد کنید..."
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">ارسال</button>
+                </form>
+
+                <div class="rating-section mt-4" style="max-width: 600px">
+                  <div style="display: flex; align-items: center; gap: 12px">
+                    <label
+                      class="form-label mb-0"
+                      style="
+                        font-size: 1.2rem;
+                        color: #fff;
+                        font-weight: bold;
+                        min-width: 90px;
+                      "
+                    >
+                      امتیاز شما:
+                    </label>
+                    <div
+                      id="starRating"
+                      style="
+                        font-size: 2rem;
+                        direction: ltr;
+                        display: flex;
+                        gap: 2px;
+                      "
+                    >
+                      <span
+                        class="star"
+                        data-value="1"
+                        style="cursor: pointer; color: #bbb"
+                      >
+                        &#9733;
+                      </span>
+                      <span
+                        class="star"
+                        data-value="2"
+                        style="cursor: pointer; color: #bbb"
+                      >
+                        &#9733;
+                      </span>
+                      <span
+                        class="star"
+                        data-value="3"
+                        style="cursor: pointer; color: #bbb"
+                      >
+                        &#9733;
+                      </span>
+                      <span
+                        class="star"
+                        data-value="4"
+                        style="cursor: pointer; color: #bbb"
+                      >
+                        &#9733;
+                      </span>
+                      <span
+                        class="star"
+                        data-value="5"
+                        style="cursor: pointer; color: #bbb"
+                      >
+                        &#9733;
+                      </span>
+                    </div>
+                    <div
+                      id="selectedRatingValue"
+                      style="color: orange; font-size: 1.2rem; min-width: 32px"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- shopsectionStarted -->
+    <footer class="mt-5">
+      <div class="container pt-4">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <h3>ARTSCAPE</h3>
+            <p class="mt-3">
+              جهان بدون عکاسی برای ما مثل دنیای بدون نور است، که ذهن ما را باز
+              می‌کند و احساسات را بیان می‌کند.
+            </p>
+          </div>
+          <div class="col-12 col-md-4">
+            <h3>جدیدترین تصاویر</h3>
+            <div class="footer-imgs">
+              <img
+                src="../images/photo_2025-05-24_11-27-22.jpg"
+                alt="تصویر 1"
+              />
+              <img
+                src="../images/photo_2025-05-24_11-27-22.jpg"
+                alt="تصویر 2"
+              />
+              <img
+                src="../images/photo_2025-05-24_11-27-22.jpg"
+                alt="تصویر 3"
+              />
+              <img
+                src="../images/photo_2025-05-24_11-27-22.jpg"
+                alt="تصویر 4"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <h3>اطلاعات تماس</h3>
+            <p class="mt-4">ایمیل: <span>2250450@gmail.com</span></p>
+            <p class="mt-4">تلفن: <span>09918728292</span></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../main.js"></script>
+    <script src="./productSampel.js"></script>
+  </body>
+</html>

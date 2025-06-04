@@ -1,0 +1,270 @@
+.product-container {
+  margin-top: 7rem;
+}
+.product-caption {
+  font-weight: bold;
+}
+.product-caption p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.product-price #price {
+  font-size: 32px;
+  font-weight: bold;
+}
+.product-price #is-availbe {
+  color: #ffffff;
+  background-color: #28a745;
+  border: 10px solid #28a745;
+  border-radius: 12px;
+}
+.feature {
+  padding: 1rem;
+  margin-bottom: 5px;
+}
+.product-features .feature {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 18px 0;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.product-features .feature:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(255, 152, 0, 0.18);
+}
+.product-features .feature i {
+  margin-left: 0;
+  margin-right: 0;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12));
+  flex-shrink: 0;
+  max-width: 2.3em;
+  max-height: 2.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-features .feature span {
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+.produc-btn {
+  font-weight: bold;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+  padding: 0.6rem;
+  transition: all 0.3s;
+}
+.produc-btn:hover {
+  border: 1px solid#ff8c00;
+  background-color: #ff8c00;
+  color: #fff;
+}
+.description-header {
+  font-weight: bold;
+}
+
+.description-section,
+.comments-section {
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-right: 4rem;
+  font-size: 1.5rem;
+}
+.tab-btn {
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.2s, background 0.2s;
+}
+.tab-btn.active {
+  border-bottom: 3px solid #ff8c00;
+  background: rgba(255, 140, 0, 0.08);
+  border-radius: 0 0 8px 8px;
+}
+.description-pane p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+#comments-content h1::after {
+  content: "";
+  display: block;
+  width: 3%;
+  height: 2px;
+  background-color: #ff8c00;
+  margin-top: 1rem;
+}
+
+/* فرم دیدگاه کاربران */
+#commentForm .form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  border-radius: 0;
+  color: #fff;
+  box-shadow: none;
+  padding-right: 0;
+  padding-left: 0;
+}
+#commentForm .form-control:focus {
+  background: transparent;
+  color: #fff;
+  border-bottom: 2px solid #ffa500;
+  box-shadow: none;
+}
+#commentForm label.form-label {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 2px;
+  margin-right: 0;
+  margin-left: 0;
+  display: block;
+  font-size: 1rem;
+}
+#commentForm button[type="submit"] {
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 8px 32px;
+  transition: border-color 0.2s, color 0.2s;
+}
+#commentForm button[type="submit"]:hover {
+  border-color: #ffa500;
+  color: #ffa500;
+  background: none;
+}
+#commentForm textarea.form-control {
+  border: 2px solid #fff;
+  border-radius: 8px;
+  min-height: 100px;
+  color: #fff;
+  background: transparent;
+  box-shadow: none;
+  padding: 12px 16px;
+}
+#commentForm textarea.form-control:focus {
+  border: 2px solid #ffa500;
+  background: transparent;
+  color: #fff;
+  box-shadow: none;
+}
+#commentForm input.form-control::placeholder {
+  color: #fff;
+  opacity: 1;
+  font-size: 1rem;
+}
+#commentForm textarea.form-control::placeholder {
+  color: #fff;
+  opacity: 1;
+  font-size: 1rem;
+}
+#commentsList {
+  color: #fff;
+  background: rgba(34, 34, 34, 0.7);
+  border-radius: 12px;
+  padding: 24px 18px;
+  margin-top: 2rem;
+}
+#commentsList .comment-item {
+  border-bottom: 1px solid #444;
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+}
+#commentsList .comment-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+#commentsList .comment-author {
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 4px;
+}
+#commentsList .comment-date {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 6px;
+}
+#commentsList .comment-text {
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+/* استایل کامنت‌ها در بخش محصول */
+.comments {
+  color: #fff;
+  background: rgba(34, 34, 34, 0.7);
+  border-radius: 12px;
+  padding: 24px 18px;
+  margin-top: 2rem;
+}
+.comments .comment-item {
+  border-bottom: 1px solid #444;
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.04);
+  padding: 18px 14px 12px 14px;
+  transition: box-shadow 0.2s;
+}
+.comments .comment-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.comments .comment-author {
+  font-weight: bold;
+  color: orange;
+  margin-bottom: 4px;
+  font-size: 1.08rem;
+}
+.comments .comment-date {
+  font-size: 0.92rem;
+  color: #bbb;
+  margin-bottom: 6px;
+}
+.comments .comment-text {
+  font-size: 1.08rem;
+  color: #fff;
+  margin-top: 4px;
+  line-height: 1.7;
+}
+.product-thumbnails {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+.product-thumbnails .thumb-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: border 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  background: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.product-thumbnails .thumb-img.selected-thumb {
+  border: 2px solid orange;
+  box-shadow: 0 0 8px orange;
+}
+.main-product-img {
+  width: 100%;
+  max-width: 480px;
+  height: 400px;
+  object-fit: cover;
+  background: #222;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
