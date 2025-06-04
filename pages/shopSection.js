@@ -17,6 +17,11 @@ window.addEventListener("DOMContentLoaded", function () {
       category: "سبک زندگی",
       price: "80تومان",
       image: "../images/photo_2025-05-22_15-30-33.jpg",
+      images: [
+        "../images/photo_2025-05-22_15-30-33.jpg",
+        "../images/photo_2025-05-22_15-30-26.jpg",
+        "../images/photo_2025-05-24_11-27-22.jpg",
+      ],
     },
     {
       id: 2,
@@ -24,6 +29,11 @@ window.addEventListener("DOMContentLoaded", function () {
       category: "استودیو",
       price: "90تومان",
       image: "../images/photo_2025-05-22_15-30-26.jpg",
+      images: [
+        "../images/photo_2025-05-22_15-30-26.jpg",
+        "../images/photo_2025-05-22_15-30-33.jpg",
+        "../images/photo_2025-05-24_11-27-22.jpg",
+      ],
     },
     {
       id: 3,
@@ -31,6 +41,11 @@ window.addEventListener("DOMContentLoaded", function () {
       category: "فشن و مد",
       price: "120تومان",
       image: "../images/photo_2025-05-24_11-27-22.jpg",
+      images: [
+        "../images/photo_2025-05-24_11-27-22.jpg",
+        "../images/photo_2025-05-22_15-30-33.jpg",
+        "../images/photo_2025-05-22_15-30-26.jpg",
+      ],
     },
     {
       id: 4,
@@ -212,7 +227,7 @@ window.addEventListener("DOMContentLoaded", function () {
       title: "محصول 37",
       category: "پرتره",
       price: "75تومان",
-      image: "../images/photo_2025-05-22_15-30-26.jpg",
+      image: "../images/nature-3082832_1280.jpg",
     },
     {
       id: 30,
@@ -404,7 +419,9 @@ window.addEventListener("DOMContentLoaded", function () {
         <button class="modal-close">&times;</button>
         <div style="display: flex; align-items: center; justify-content: center; width: 100%; position: relative;">
           <button class="modal-arrow modal-arrow-left" style="position: absolute; left: -48px; top: 50%; transform: translateY(-50%);">&#8592;</button>
-          <img src="${product.image}" class="modal-img" style="max-width:60vw; max-height:60vh; object-fit:contain; border-radius:12px; margin-bottom:1.5rem;" />
+          <img src="${
+            product.image
+          }" class="modal-img" style="max-width:60vw; max-height:60vh; object-fit:contain; border-radius:12px; margin-bottom:1.5rem;" />
           <button class="modal-arrow modal-arrow-right" style="position: absolute; right: -48px; top: 50%; transform: translateY(-50%);">&#8594;</button>
         </div>
         <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin: 10px 0; font-weight: bold; font-size: 1.1em;">
@@ -432,6 +449,13 @@ window.addEventListener("DOMContentLoaded", function () {
       currentIdx = (currentIdx - 1 + productsArr.length) % productsArr.length;
       updateModalContent();
     };
+    // مشاهده محصول: ذخیره اطلاعات و انتقال
+    modal.querySelector(".modal-link").onclick = function (e) {
+      e.preventDefault();
+      const selectedProduct = productsArr[currentIdx];
+      localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct));
+      window.location.href = "productSampel.html";
+    };
   }
   // Attach click event to product images after render
   function addShopProductClickHandlers() {
@@ -439,11 +463,14 @@ window.addEventListener("DOMContentLoaded", function () {
       ".shop-product-card .product-image-wrapper img"
     );
     const filtered = getFilteredProducts();
-    productImgs.forEach((img, idx) => {
+    productImgs.forEach((img) => {
       img.style.cursor = "pointer";
+      // پیدا کردن محصول دقیق با توجه به src عکس و عنوان
       img.onclick = function () {
-        // Find product by image src
-        const product = filtered[idx];
+        const imgSrc = img.getAttribute('src');
+        const title = img.closest('.shop-product-card').querySelector('h3').textContent.trim();
+        const product = filtered.find(p => p.image === imgSrc && p.title === title);
+        const idx = filtered.findIndex(p => p.image === imgSrc && p.title === title);
         if (product) createShopProductModal(product, filtered, idx);
       };
     });

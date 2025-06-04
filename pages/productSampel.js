@@ -1,4 +1,51 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // --- داینامیک کردن اطلاعات محصول ---
+  const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct') || 'null');
+  if (selectedProduct) {
+    // تصویر اصلی
+    const mainImg = document.querySelector('.main-product-img');
+    if (mainImg) mainImg.src = selectedProduct.image;
+    // عنوان
+    const titleElem = document.querySelector('.product-caption h2');
+    if (titleElem) titleElem.textContent = selectedProduct.title;
+    // دسته‌بندی
+    const catElem = document.querySelector('.product-caption p.text-right');
+    if (catElem) catElem.textContent = selectedProduct.category;
+    // قیمت
+    const priceElem = document.getElementById('price');
+    if (priceElem) priceElem.textContent = selectedProduct.price;
+    // توضیحات (در صورت وجود)
+    const descriptionContent = document.getElementById('description-content');
+    if (descriptionContent) {
+      descriptionContent.innerHTML = `<p style="font-size:1.1rem;line-height:2;">${selectedProduct.description || 'توضیحات برای این محصول ثبت نشده است.'}</p>`;
+    }
+    // گالری تصاویر داینامیک
+    const thumbsContainer = document.getElementById('product-thumbnails');
+    if (thumbsContainer) {
+      thumbsContainer.innerHTML = '';
+      let gallery = Array.isArray(selectedProduct.images) ? selectedProduct.images : [selectedProduct.image];
+      gallery.forEach((imgSrc, idx) => {
+        const thumb = document.createElement('img');
+        thumb.src = imgSrc;
+        thumb.className = 'img-thumbnail thumb-img';
+        thumb.style.width = '70px';
+        thumb.style.height = '70px';
+        thumb.style.objectFit = 'cover';
+        thumb.style.cursor = 'pointer';
+        thumb.alt = 'thumb' + (idx + 1);
+        if (mainImg && mainImg.src.includes(imgSrc)) thumb.classList.add('selected-thumb');
+        thumb.onclick = function() {
+          mainImg.src = imgSrc;
+          document.querySelectorAll('.thumb-img').forEach(t => t.classList.remove('selected-thumb'));
+          thumb.classList.add('selected-thumb');
+        };
+        thumbsContainer.appendChild(thumb);
+      });
+    }
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   const qtyValue = document.getElementById("quantity-value");
   const increaseBtn = document.getElementById("increase-qty");
   const decreaseBtn = document.getElementById("decrease-qty");
