@@ -1,43 +1,52 @@
 document.addEventListener("DOMContentLoaded", function () {
   // --- داینامیک کردن اطلاعات محصول ---
-  const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct') || 'null');
+  const selectedProduct = JSON.parse(
+    localStorage.getItem("selectedProduct") || "null"
+  );
   if (selectedProduct) {
     // تصویر اصلی
-    const mainImg = document.querySelector('.main-product-img');
+    const mainImg = document.querySelector(".main-product-img");
     if (mainImg) mainImg.src = selectedProduct.image;
     // عنوان
-    const titleElem = document.querySelector('.product-caption h2');
+    const titleElem = document.querySelector(".product-caption h2");
     if (titleElem) titleElem.textContent = selectedProduct.title;
     // دسته‌بندی
-    const catElem = document.querySelector('.product-caption p.text-right');
+    const catElem = document.querySelector(".product-caption p.text-right");
     if (catElem) catElem.textContent = selectedProduct.category;
     // قیمت
-    const priceElem = document.getElementById('price');
+    const priceElem = document.getElementById("price");
     if (priceElem) priceElem.textContent = selectedProduct.price;
     // توضیحات (در صورت وجود)
-    const descriptionContent = document.getElementById('description-content');
+    const descriptionContent = document.getElementById("description-content");
     if (descriptionContent) {
-      descriptionContent.innerHTML = `<p style="font-size:1.1rem;line-height:2;">${selectedProduct.description || 'توضیحات برای این محصول ثبت نشده است.'}</p>`;
+      descriptionContent.innerHTML = `<p style="font-size:1.1rem;line-height:2;">${
+        selectedProduct.description || "توضیحات برای این محصول ثبت نشده است."
+      }</p>`;
     }
     // گالری تصاویر داینامیک
-    const thumbsContainer = document.getElementById('product-thumbnails');
+    const thumbsContainer = document.getElementById("product-thumbnails");
     if (thumbsContainer) {
-      thumbsContainer.innerHTML = '';
-      let gallery = Array.isArray(selectedProduct.images) ? selectedProduct.images : [selectedProduct.image];
+      thumbsContainer.innerHTML = "";
+      let gallery = Array.isArray(selectedProduct.images)
+        ? selectedProduct.images
+        : [selectedProduct.image];
       gallery.forEach((imgSrc, idx) => {
-        const thumb = document.createElement('img');
+        const thumb = document.createElement("img");
         thumb.src = imgSrc;
-        thumb.className = 'img-thumbnail thumb-img';
-        thumb.style.width = '70px';
-        thumb.style.height = '70px';
-        thumb.style.objectFit = 'cover';
-        thumb.style.cursor = 'pointer';
-        thumb.alt = 'thumb' + (idx + 1);
-        if (mainImg && mainImg.src.includes(imgSrc)) thumb.classList.add('selected-thumb');
-        thumb.onclick = function() {
+        thumb.className = "img-thumbnail thumb-img";
+        thumb.style.width = "70px";
+        thumb.style.height = "70px";
+        thumb.style.objectFit = "cover";
+        thumb.style.cursor = "pointer";
+        thumb.alt = "thumb" + (idx + 1);
+        if (mainImg && mainImg.src.includes(imgSrc))
+          thumb.classList.add("selected-thumb");
+        thumb.onclick = function () {
           mainImg.src = imgSrc;
-          document.querySelectorAll('.thumb-img').forEach(t => t.classList.remove('selected-thumb'));
-          thumb.classList.add('selected-thumb');
+          document
+            .querySelectorAll(".thumb-img")
+            .forEach((t) => t.classList.remove("selected-thumb"));
+          thumb.classList.add("selected-thumb");
         };
         thumbsContainer.appendChild(thumb);
       });
@@ -93,17 +102,104 @@ document.addEventListener("DOMContentLoaded", function () {
         '<div class="text-warning">هیچ نظری برای این محصول ثبت نشده است.</div>';
       return;
     }
-    commentsDiv.innerHTML = comments
-      .map(
-        (c) => `
-        <div class="comment-item">
-          <div class="comment-author">${c.name}</div>
+    // تابع بازگشتی برای نمایش کامنت و ریپلای‌ها
+    function renderCommentItem(c, parentIdx, level = 0) {
+      const rating = c.rating || 0;
+      const stars = rating
+        ? '<span style="color:orange;font-size:1.1rem;">' +
+          "★".repeat(rating) +
+          "☆".repeat(5 - rating) +
+          "</span>"
+        : "";
+      const replies = c.replies || [];
+      const idxAttr =
+        parentIdx !== undefined ? `data-parent-idx="${parentIdx}"` : "";
+      // تشخیص ادمین
+      const isAdmin = c.name && c.name.trim().toLowerCase() === 'ادمین';
+      return `
+        <div class="comment-item" style="margin-right:${
+          level * 24
+        }px; border-right:${level ? "2px solid orange" : "none"}; padding-right:8px; margin-top:10px;">
+          <div class="comment-author" style="display:flex;align-items:center;gap:8px;">
+            <span${isAdmin ? ' style="color:#fff;background:orange;padding:2px 8px;border-radius:6px;font-weight:bold;"' : ''}>${c.name}${isAdmin ? ' <span style=\'font-size:0.9em; color:#fff; background:#d32f2f; border-radius:4px; padding:1px 6px; margin-right:6px;\'>ادمین</span>' : ''}</span> ${stars}
+          </div>
           <div class="comment-date">${c.date}</div>
-          <div class="comment-text">${c.comment}</div>
+          <div class="comment-text"${isAdmin ? ' style="background:#fff3e0;color:#d32f2f;border-radius:6px;padding:6px 10px;"' : ''}>${c.comment}</div>
+          <button class="reply-btn btn btn-sm btn-outline-warning mt-2" data-idx="${
+            c.id
+          }" ${idxAttr}>پاسخ</button>
+          <form class="reply-form mt-2" data-idx="${
+            c.id
+          }" style="display:none;">
+            <input type="text" class="form-control mb-2" name="name" placeholder="نام شما" required />
+            <textarea class="form-control mb-2" name="comment" rows="2" placeholder="پاسخ شما..." required></textarea>
+            <button type="submit" class="btn btn-primary btn-sm">ارسال پاسخ</button>
+          </form>
+          <div class="replies">
+            ${replies
+              .map((r) => renderCommentItem(r, c.id, level + 1))
+              .join("")}
+          </div>
         </div>
-      `
-      )
+      `;
+    }
+    commentsDiv.innerHTML = comments
+      .map((c) => renderCommentItem(c, undefined, 0))
       .join("");
+
+    // اضافه کردن event به دکمه‌های reply و فرم‌ها
+    document.querySelectorAll(".reply-btn").forEach((btn) => {
+      btn.addEventListener("click", function () {
+        const idx = this.getAttribute("data-idx");
+        const parentIdx = this.getAttribute("data-parent-idx");
+        const form = document.querySelector(
+          `form.reply-form[data-idx="${idx}"]`
+        );
+        if (form)
+          form.style.display = form.style.display === "none" ? "block" : "none";
+      });
+    });
+    document.querySelectorAll("form.reply-form").forEach((form) => {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const idx = this.getAttribute("data-idx");
+        const name = this.name.value.trim();
+        const comment = this.comment.value.trim();
+        if (!name || !comment) return;
+        const now = new Date();
+        const date =
+          now.toLocaleDateString("fa-IR") +
+          " " +
+          now.toLocaleTimeString("fa-IR", {
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+        const comments = JSON.parse(localStorage.getItem(commentsKey) || "[]");
+        // تابع بازگشتی برای پیدا کردن کامنت و افزودن ریپلای
+        function addReply(commentsArr) {
+          for (let c of commentsArr) {
+            if (String(c.id) === String(idx)) {
+              if (!c.replies) c.replies = [];
+              c.replies.push({
+                id: Date.now() + Math.random(),
+                name,
+                comment,
+                date,
+                replies: [],
+              });
+              return true;
+            }
+            if (c.replies && c.replies.length) {
+              if (addReply(c.replies)) return true;
+            }
+          }
+          return false;
+        }
+        addReply(comments);
+        localStorage.setItem(commentsKey, JSON.stringify(comments));
+        renderComments();
+      });
+    });
   }
 
   if (commentForm) {
@@ -119,9 +215,25 @@ document.addEventListener("DOMContentLoaded", function () {
         " " +
         now.toLocaleTimeString("fa-IR", { hour: "2-digit", minute: "2-digit" });
       const comments = JSON.parse(localStorage.getItem(commentsKey) || "[]");
-      comments.unshift({ name, email, comment, date });
+      // اضافه کردن rating و id و replies
+      comments.unshift({
+        id: Date.now() + Math.random(),
+        name,
+        email,
+        comment,
+        date,
+        rating: selectedRating,
+        replies: [],
+      });
       localStorage.setItem(commentsKey, JSON.stringify(comments));
       commentForm.reset();
+      selectedRating = 0;
+      // ریست رنگ ستاره‌ها و مقدار
+      if (starRating) {
+        const stars = starRating.querySelectorAll(".star");
+        stars.forEach((star) => (star.style.color = "#bbb"));
+      }
+      if (selectedRatingValue) selectedRatingValue.textContent = "";
       renderComments();
     });
     renderComments();
@@ -204,10 +316,10 @@ document.addEventListener("DOMContentLoaded", function () {
       mainImg.style.width = prevWidth + "px";
       mainImg.style.height = prevHeight + "px";
       // Highlight selected thumbnail
-      thumbs.forEach(t => t.classList.remove("selected-thumb"));
+      thumbs.forEach((t) => t.classList.remove("selected-thumb"));
       this.classList.add("selected-thumb");
       // بعد از لود شدن عکس جدید، ابعاد را مجدداً ست می‌کنیم تا تغییر نکند
-      mainImg.onload = function() {
+      mainImg.onload = function () {
         mainImg.style.width = prevWidth + "px";
         mainImg.style.height = prevHeight + "px";
       };

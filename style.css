@@ -2,11 +2,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Vazir", sans-serif;
   color: white;
 }
 body {
   background-color: rgb(11, 11, 11) !important;
+  font-family: "Pinar", sans-serif !important;
+}
+@font-face {
+  font-family: "Pinar";
+  src: url("../font/Pinar-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pinar";
+  src: url("../font/Pinar-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pinar";
+  src: url("../font/Pinar-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
 }
 .navbar {
   margin-top: 1rem;
