@@ -1,0 +1,109 @@
+.lock-overlay {
+  position: fixed;
+  inset: 0;
+  background: #000 !important;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+.lock-form {
+  background: #fff;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 18px;
+  box-shadow: -10px 10px 0 0 #0b0a0a;
+  min-width: 320px;
+  max-width: 90vw;
+  text-align: center;
+}
+.lock-form h2 {
+  margin-bottom: 1.5rem;
+  color: #ff9800;
+  font-weight: bold;
+}
+#lock-error {
+  font-size: 1rem;
+}
+@media (max-width: 600px) {
+  .lock-form {
+    min-width: 90vw;
+    padding: 1.5rem 0.5rem;
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(-10px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.lock-form.shake {
+  animation: shake 0.5s;
+}
+.form-check-input {
+  border: 2px solid #000 !important;
+}
+.form-check-input:checked {
+  background-color: #ff9800 !important;
+  border-color: #ff9800 !important;
+}
+.lock-form .form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.lock-form .form-control {
+  background: #fff;
+  color: #000;
+  border: 1.5px solid #aaa;
+  border-radius: 8px;
+  padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.2s;
+}
+.lock-form .form-control:focus {
+  border-color: #ff9800;
+  box-shadow: 0 0 0 2px #ff980033;
+}
+.lock-form .floating-label {
+  position: absolute;
+  right: 1rem;
+  top: 1.1rem;
+  color: #000;
+  background: transparent;
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 0.25rem;
+  font-size: 1rem;
+}
+.lock-form .form-control:focus ~ .floating-label,
+.lock-form .form-control:not(:placeholder-shown) ~ .floating-label {
+  top: -0.7rem;
+  right: 0.7rem;
+  font-size: 0.85rem;
+  color: #ff9800;
+  background: #fff;
+  padding: 0 0.4rem;
+}
+.lock-form .btn {
+  background-color: #141414;
+  color: #fff;
+  font-weight: bold;
+}
+.lock-form .btn:hover {
+  background-color: #ff9800;
+  color: #000;
+}
