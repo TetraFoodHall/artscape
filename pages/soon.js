@@ -14,14 +14,14 @@ function updateTimer() {
   let minutes = Math.floor((diff % 3600) / 60);
   let seconds = diff % 60;
   document.getElementById("timer").innerHTML = `<span>${toPersianDigits(
-    days.toString().padStart(2, "0")
-  )}</span> : <span>${toPersianDigits(
-    hours.toString().padStart(2, "0")
+    seconds.toString().padStart(2, "0")
   )}</span> : <span>${toPersianDigits(
     minutes.toString().padStart(2, "0")
   )}</span> : <span>${toPersianDigits(
-    seconds.toString().padStart(2, "0")
-  )}</span><br><span style='font-size:1rem'>روز : ساعت : دقیقه : ثانیه</span>`;
+    hours.toString().padStart(2, "0")
+  )}</span> : <span>${toPersianDigits(
+    days.toString().padStart(2, "0")
+  )}</span><br><span style='font-size:1rem'>ثانیه : دقیقه : ساعت : روز</span>`;
   if (diff > 0) {
     setTimeout(updateTimer, 1000);
   } else {

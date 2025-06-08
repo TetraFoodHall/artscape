@@ -53,9 +53,9 @@
               <a class="nav-link main-page" href="../index.html">صفحه اصلی</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">فروشگاه</a>
+              <a class="nav-link" href="shopSection.html">فروشگاه</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown gallery-dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 href="services.html"
@@ -66,13 +66,13 @@
                 >خدمات</a
               >
               <ul
-                class="dropdown-menu text-end"
+                class="dropdown-menu gallery-dropdown-menu"
                 aria-labelledby="servicesDropdown"
               >
                 <li>
-                  <a class="dropdown-item" href="./services.html"
-                    >خدمات آرت اسکیپ
-                  </a>
+                  <a class="dropdown-item" href="services.html"
+                    >خدمات آرت اسکیپ</a
+                  >
                 </li>
                 <li>
                   <a class="dropdown-item" href="photography.html"
@@ -85,14 +85,35 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="./podcastHome.html">پادکست</a>
+                  <a class="dropdown-item" href="podcastHome.html">پادکست</a>
                 </li>
               </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">گالری </a></li>
-            <li class="nav-item"><a class="nav-link" href="#">وبلاگ </a></li>
+            <li class="nav-item dropdown gallery-dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="gallery.html"
+                id="galleryDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >آلبوم ها</a
+              >
+              <ul
+                class="dropdown-menu gallery-dropdown-menu"
+                aria-labelledby="galleryDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="gallery.html">گالری</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">گالری رمز دار</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">وبلاگ</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="#">حساب کاربری من </a>
+              <a class="nav-link" href="#">حساب کاربری من</a>
             </li>
           </ul>
           <ul class="navbar-nav mb-2 mb-lg-0">
@@ -116,7 +137,6 @@
         </div>
       </div>
     </nav>
-
     <!-- hero carousel -->
     <div class="container slider-container">
       <div class="right-item">

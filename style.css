@@ -539,3 +539,41 @@ footer > div {
 footer p {
   font-size: 14px;
 }
+.gallery-dropdown {
+  position: relative;
+}
+.gallery-dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.98);
+  transition: all 0.35s cubic-bezier(0.4, 1.4, 0.6, 1);
+  box-sizing: border-box;
+  background: #181818;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  border: none;
+  pointer-events: none;
+}
+.gallery-dropdown:hover .gallery-dropdown-menu,
+.gallery-dropdown:focus-within .gallery-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  animation: dropdownFadeIn 0.45s cubic-bezier(0.4, 1.4, 0.6, 1);
+  pointer-events: auto;
+}
+.dropdown-menu li {
+  padding: 0.5rem;
+}
+.gallery-dropdown-menu .dropdown-item {
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  width: 100%;
+  transition: background 0.2s, color 0.2s;
+}
+.gallery-dropdown-menu .dropdown-item:hover {
+  background: orange;
+  color: #181818;
+}

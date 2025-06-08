@@ -55,7 +55,7 @@
             <li class="nav-item">
               <a class="nav-link" href="shopSection.html">فروشگاه</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown gallery-dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 href="services.html"
@@ -66,11 +66,11 @@
                 >خدمات</a
               >
               <ul
-                class="dropdown-menu text-end"
+                class="dropdown-menu gallery-dropdown-menu"
                 aria-labelledby="servicesDropdown"
               >
                 <li>
-                  <a class="dropdown-item" href="./services.html"
+                  <a class="dropdown-item" href="services.html"
                     >خدمات آرت اسکیپ</a
                   >
                 </li>
@@ -85,11 +85,32 @@
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="./podcastHome.html">پادکست</a>
+                  <a class="dropdown-item" href="podcastHome.html">پادکست</a>
                 </li>
               </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">گالری</a></li>
+            <li class="nav-item dropdown gallery-dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="gallery.html"
+                id="galleryDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >آلبوم ها</a
+              >
+              <ul
+                class="dropdown-menu gallery-dropdown-menu"
+                aria-labelledby="galleryDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="gallery.html">گالری</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">گالری رمز دار</a>
+                </li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#">وبلاگ</a></li>
             <li class="nav-item">
               <a class="nav-link" href="#">حساب کاربری من</a>
@@ -199,47 +220,50 @@
         </ul>
       </div>
       <!-- video samples -->
-      <div class="sampels mt-5">
-        <div class="row">
-          <div
-            class="sampel-items col-12 d-flex flex-wrap justify-content-center"
-          ></div>
+      <div id="border">
+        <div class="sampels mt-5">
+          <div class="row">
+            <div
+              class="sampel-items col-12 d-flex flex-wrap justify-content-center"
+            ></div>
+          </div>
+        </div>
+        <!-- our team start -->
+        <div class="cotainer team-container">
+          <h1 class="text-center">تیم <span>ما</span></h1>
+          <div class="our-team">
+            <div class="row">
+              <div class="teammate col-12 col-md-3">
+                <img src="../images/nature-3082832_1280.jpg" alt="..." />
+                <h4 class="text-center">گیت من لر</h4>
+                <p class="text-center">برنامه نویس</p>
+              </div>
+              <div class="teammate col-12 col-md-3">
+                <img src="../images/nature-3082832_1280.jpg" alt="..." />
+                <h4 class="text-center">گیت من لر</h4>
+                <p class="text-center">برنامه نویس</p>
+              </div>
+              <div class="teammate col-12 col-md-3">
+                <img src="../images/nature-3082832_1280.jpg" alt="..." />
+                <h4 class="text-center">گیت من لر</h4>
+                <p class="text-center">برنامه نویس</p>
+              </div>
+              <div class="teammate col-12 col-md-3">
+                <img src="../images/nature-3082832_1280.jpg" alt="..." />
+                <h4 class="text-center">گیت من لر</h4>
+                <p class="text-center">برنامه نویس</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!-- our team start -->
-    <div class="cotainer team-container mt-5">
-      <h1 class="text-center">تیم <span>ما</span></h1>
-      <div class="our-team">
-        <div class="row">
-          <div class="teammate col-12 col-md-3">
-            <img src="../images/nature-3082832_1280.jpg" alt="..." />
-            <h4 class="text-center">گیت من لر</h4>
-            <p class="text-center">برنامه نویس</p>
-          </div>
-          <div class="teammate col-12 col-md-3">
-            <img src="../images/nature-3082832_1280.jpg" alt="..." />
-            <h4 class="text-center">گیت من لر</h4>
-            <p class="text-center">برنامه نویس</p>
-          </div>
-          <div class="teammate col-12 col-md-3">
-            <img src="../images/nature-3082832_1280.jpg" alt="..." />
-            <h4 class="text-center">گیت من لر</h4>
-            <p class="text-center">برنامه نویس</p>
-          </div>
-          <div class="teammate col-12 col-md-3">
-            <img src="../images/nature-3082832_1280.jpg" alt="..." />
-            <h4 class="text-center">گیت من لر</h4>
-            <p class="text-center">برنامه نویس</p>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <!-- about us -->
-    <div class="container mt-5 about-container">
+    <div class="container about-container">
       <div class="about-us">
         <div class="row">
-          <div class="about-title col-12 col-md-6">
+          <div class="about-title border col-12 col-md-6">
             <div class="about-nav">
               <ul>
                 <li>سبک کاری ما</li>
