@@ -577,3 +577,38 @@ footer p {
   background: orange;
   color: #181818;
 }
+
+/* Staggered dropdown animation */
+.gallery-dropdown-menu .dropdown-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: dropdown-stagger 0.4s forwards;
+}
+.gallery-dropdown-menu .dropdown-item:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.gallery-dropdown-menu .dropdown-item:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.gallery-dropdown-menu .dropdown-item:nth-child(3) {
+  animation-delay: 0.25s;
+}
+.gallery-dropdown-menu .dropdown-item:nth-child(4) {
+  animation-delay: 0.35s;
+}
+
+@keyframes dropdown-stagger {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Show animation only when dropdown is open */
+.gallery-dropdown-menu.show .dropdown-item {
+  animation-play-state: running;
+}
+.gallery-dropdown-menu .dropdown-item {
+  animation-play-state: paused;
+}
+/* partii */
