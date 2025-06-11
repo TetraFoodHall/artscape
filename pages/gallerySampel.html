@@ -153,13 +153,31 @@
             src="../images/photo_2025-05-24_11-27-22.jpg"
             alt="عکس هنری"
             class="img-fluid"
+            style="
+              display: block;
+              width: 100%;
+              border-radius: 10px;
+              object-fit: cover;
+            "
           />
+          <video
+            id="sampleGalleryVideo"
+            src=""
+            class="sampleGallery-custom-video"
+            controls
+            style="
+              display: none;
+              width: 100%;
+              border-radius: 10px;
+              object-fit: cover;
+            "
+          ></video>
         </div>
         <div
           class="col-lg-3 d-flex flex-column align-items-start justify-content-start"
           id="sampleGalleryPhotoInfo"
           style="
-          margin-top: 15rem;
+            margin-top: 15rem;
             background: #141414;
             border-radius: 16px;
             box-shadow: 0 2px 12px #ffb84d33;
@@ -220,14 +238,6 @@
         >
           <i class="fa-solid fa-table fa-2x"></i>
         </a>
-      </div>
-      <div class="sampleGallery-video-section col-12 mt-5">
-        <video
-          id="sampleGalleryVideo"
-          src="../video/15445977-uhd_3840_2160_30fps (1).mp4"
-          class="sampleGallery-custom-video"
-          controls
-        ></video>
       </div>
     </div>
     <!-- shopsectionStarted -->

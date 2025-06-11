@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Sample gallery images (replace or extend as needed)
   const galleryImages = [
+    // فقط آیتم‌هایی که ادمین می‌خواهد اینجا قرار می‌گیرند
+    // نمونه: فقط عکس‌ها و ویدیوهای دلخواه را اینجا قرار دهید
     {
       src: "../images/photo_2025-05-22_15-30-26.jpg",
       title: "اثر هنری ۱",
       desc: "توضیح کوتاه برای اثر هنری ۱",
       category: "استودیو",
-      type: "image", // اضافه شد
+      type: "image",
     },
     {
       src: "../images/photo_2025-05-22_15-30-33.jpg",
@@ -46,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       src: "../video/15445977-uhd_3840_2160_30fps (1).mp4",
-      title: "ویدیو هنری ۲",
-      desc: "توضیح کوتاه برای ویدیو هنری ۲",
+      title: "ویدیو هنری ۱",
+      desc: "توضیح کوتاه برای ویدیو هنری ۱",
       category: "ویدیو",
       type: "video",
       poster: "../images/photo_2025-05-24_11-27-22.jpg",
@@ -191,13 +192,12 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
     }
     let productBtn = "";
-    if (img.type !== "video") {
-      productBtn = `
-        <div style="text-align:center;margin-top:16px;">
-          <a href="#" class="btn btn-dark" style="min-width:160px;">مشاهده محصول</a>
-        </div>
-      `;
-    }
+    // دکمه مشاهده محصول برای همه آیتم‌ها (عکس و ویدیو)
+    productBtn = `
+      <div style="text-align:center;margin-top:16px;">
+        <a href="#" class="btn btn-dark gallery-view-product-btn" style="min-width:160px;">مشاهده محصول</a>
+      </div>
+    `;
     const modalHtml = `
       <div id="gallery-modal" style="position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;">
         <div style="background:#141414;padding:24px 16px 8px 16px;border-radius:12px;max-width:90vw;max-height:90vh;position:relative;box-shadow:0 0 32px #0002;">
@@ -289,6 +289,35 @@ document.addEventListener("DOMContentLoaded", function () {
         document.removeEventListener("keydown", window.galleryModalKeyListener);
         window.galleryModalKeyListener = null;
       }
+    }
+    // افزودن رویداد به دکمه مشاهده محصول
+    const viewProductBtn = document.querySelector(
+      "#gallery-modal .gallery-view-product-btn"
+    );
+    if (viewProductBtn) {
+      viewProductBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        // اطلاعات کامل آیتم و کل لیست را با فیلدهای کامل منتقل کن
+        // فیلدهای اضافی برای نمونه
+        const item = Object.assign({}, images[index], {
+          name: images[index].title,
+          description: images[index].desc,
+          photographer: images[index].photographer || "ابوذر همتی", // نمونه مقدار پیش‌فرض
+          dimensions: images[index].dimensions || "1080x1080", // نمونه مقدار پیش‌فرض
+        });
+        // لیست کامل با فیلدهای کامل
+        const itemsArray = images.map((img) =>
+          Object.assign({}, img, {
+            name: img.title,
+            description: img.desc,
+            photographer: img.photographer || "ابوذر همتی",
+            dimensions: img.dimensions || "1080x1080",
+          })
+        );
+        localStorage.setItem("gallerySelectedItem", JSON.stringify(item));
+        localStorage.setItem("gallerySelectedList", JSON.stringify(itemsArray));
+        window.location.href = "gallerySampel.html";
+      });
     }
   };
 });

@@ -66,10 +66,8 @@
   justify-content: flex-end;
   align-items: center;
   margin-top: 1.5rem;
-  margin-right: 3.1rem;
-  margin-left: auto;
+  margin-right: -10rem;
   width: 100%;
-  max-width: 350px;
 }
 .sampleGallery-thumbnails .sampleGallery-thumb-img {
   width: 110px;
