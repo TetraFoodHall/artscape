@@ -1,0 +1,43 @@
+.top-section {
+  flex-direction: column;
+}
+.header-title h1 {
+  font-size: 3rem;
+}
+.main-container {
+  border-right: 3px solid #141414;
+  border-left: 3px solid #141414;
+}
+.header-title p {
+  margin-top: 2rem;
+  color: orange;
+}
+.header-img {
+  position: relative;
+  margin-right: 15vh;
+}
+
+.header-img img {
+  width: 900px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.description {
+  font-weight: bold;
+  padding: 0.5rem;
+}
+.management {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-top: 2px solid #141414;
+}
+.like {
+  padding: 0.4rem;
+  color: white;
+  background-color: orange;
+  border-radius: 5px;
+  cursor: pointer;
+}

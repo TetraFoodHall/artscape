@@ -1,0 +1,108 @@
+.lock-form {
+  padding: 10rem;
+  background-color: #0c0c0c;
+  border-radius: 12px;
+  box-shadow: -10px 10px 0 0 #0b0a0a;
+  min-width: 320px;
+  max-width: 90vw;
+  text-align: center;
+  border: 1px solid #fff;
+}
+.lock-form h2 {
+  margin-bottom: 1.5rem;
+  color: #ff9800;
+  font-weight: bold;
+}
+#lock-error {
+  font-size: 1rem;
+}
+.form-check-input {
+  display: flex;
+  align-items: start;
+  border: 2px solid #000 !important;
+}
+.form-check-input:checked {
+  background-color: #ff9800 !important;
+  border-color: #ff9800 !important;
+}
+.lock-form .form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.lock-form .form-control {
+  background: #fff;
+  color: #ffffff;
+  border: 1.5px solid #aaa;
+  border-radius: 8px;
+  padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.2s;
+}
+.lock-form .form-control:focus {
+  border-color: #ff9800;
+  box-shadow: 0 0 0 2px #ff980033;
+}
+.lock-form .floating-label {
+  position: absolute;
+  right: 1rem;
+  top: 1.1rem;
+  color: #ffffff;
+  background: transparent;
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 0.25rem;
+  font-size: 1rem;
+}
+
+.lock-form .btn {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+}
+.lock-form .btn:hover {
+  background-color: orange;
+}
+.sign-out,
+.password-reset {
+  text-align: right;
+}
+.sign-out-link,
+.password-reset-link {
+  position: relative;
+  align-items: end;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+.sign-out-link:hover,
+.password-reset-link:hover {
+  color: #ff9800;
+}
+
+/* استایل اختصاصی برای عنوان حساب کاربری من */
+.sign-in-header h1 {
+  color: orange;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px #ff980044;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .lock-form {
+    padding: 2rem 0.5rem 2rem 0.5rem;
+    min-width: unset;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  .sign-in-header h1 {
+    font-size: 1.2rem;
+  }
+  .lock-form .form-control {
+    font-size: 0.95rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+}

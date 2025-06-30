@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // ایجاد ساختار HTML بخش قبل و بعد به صورت داینامیک
+  const root = document.getElementById("before-after-root");
+  if (root) {
+    root.innerHTML = `
+      <div class="main-img before-after-container">
+        <div class="before-img">
+          <img src="../images/nature-3082832_1280.jpg" alt="before" class="img-fluid" />
+        </div>
+        <div class="after-img">
+          <img src="../images/nature-3082832_1280.jpg" alt="after" class="img-fluid" />
+        </div>
+        <div class="slider-line">
+          <span class="slider-icon">
+            <i class="fa-solid fa-arrows-left-right fa-xl"></i>
+          </span>
+        </div>
+      </div>
+    `;
+  }
+
   const container = document.querySelector(".before-after-container");
   if (!container) return;
   const afterImg = container.querySelector(".after-img");

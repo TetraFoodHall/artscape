@@ -115,16 +115,24 @@ document.addEventListener("DOMContentLoaded", function () {
       const idxAttr =
         parentIdx !== undefined ? `data-parent-idx="${parentIdx}"` : "";
       // تشخیص ادمین
-      const isAdmin = c.name && c.name.trim().toLowerCase() === 'ادمین';
+      const isAdmin = c.name && c.name.trim().toLowerCase() === "ادمین";
       return `
         <div class="comment-item" style="margin-right:${
           level * 24
         }px; border-right:${level ? "2px solid orange" : "none"}; padding-right:8px; margin-top:10px;">
           <div class="comment-author" style="display:flex;align-items:center;gap:8px;">
-            <span${isAdmin ? ' style="color:#fff;background:orange;padding:2px 8px;border-radius:6px;font-weight:bold;"' : ''}>${c.name}${isAdmin ? ' <span style=\'font-size:0.9em; color:#fff; background:#d32f2f; border-radius:4px; padding:1px 6px; margin-right:6px;\'>ادمین</span>' : ''}</span> ${stars}
+            <span${
+              isAdmin
+                ? ' style="color:#fff;background:orange;padding:2px 8px;border-radius:6px;font-weight:bold;"'
+                : ""
+            }>${c.name}${isAdmin ? " <span style='font-size:0.9em; color:#fff; background:#d32f2f; border-radius:4px; padding:1px 6px; margin-right:6px;'>ادمین</span>" : ""}</span> ${stars}
           </div>
           <div class="comment-date">${c.date}</div>
-          <div class="comment-text"${isAdmin ? ' style="background:#fff3e0;color:#d32f2f;border-radius:6px;padding:6px 10px;"' : ''}>${c.comment}</div>
+          <div class="comment-text"${
+            isAdmin
+              ? ' style="background:#fff3e0;color:#d32f2f;border-radius:6px;padding:6px 10px;"'
+              : ""
+          }>${c.comment}</div>
           <button class="reply-btn btn btn-sm btn-outline-warning mt-2" data-idx="${
             c.id
           }" ${idxAttr}>پاسخ</button>
