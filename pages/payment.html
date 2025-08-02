@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ARTSCAPE</title>
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="myAccount.css" />
+    <link rel="stylesheet" href="shoppingCart.css" />
+    <link rel="stylesheet" href="payment.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -32,6 +33,83 @@
         "
       ></video>
     </div>
+
+    <!-- Payment Section -->
+    <main class="payment-section-container">
+      <section class="payment-section">
+        <div class="payment-header">
+          <span class="lock-icon">🔒</span>
+          <span class="secure-text">پرداخت امن</span>
+        </div>
+        <form id="paymentForm" class="payment-form" autocomplete="off">
+          <div class="payment-methods">
+            <label class="payment-radio">
+              <input type="radio" name="paymentType" value="online" checked />
+              <span class="icon">💳</span>
+              پرداخت آنلاین
+            </label>
+            <label class="payment-radio">
+              <input type="radio" name="paymentType" value="cod" />
+              <span class="icon">💵</span>
+              پرداخت در محل
+            </label>
+          </div>
+          <div class="gateway-select" id="gatewaySelect">
+            <label for="gateway">درگاه پرداخت</label>
+            <select id="gateway" name="gateway">
+              <option value="zarinpal">زرین‌پال</option>
+              <option value="payping">پی‌پینگ</option>
+              <option value="idpay">آیدی‌پی</option>
+            </select>
+          </div>
+          <div class="card-details" id="cardDetails">
+            <label for="cardNumber">شماره کارت</label>
+            <input type="text" id="cardNumber" maxlength="19" placeholder="---- ---- ---- ----" inputmode="numeric" />
+            <span class="error-message" id="cardNumberError"></span>
+            <div class="card-row">
+              <div>
+                <label for="expiry">تاریخ انقضا</label>
+                <input type="text" id="expiry" maxlength="5" placeholder="MM/YY" inputmode="numeric" />
+                <span class="error-message" id="expiryError"></span>
+              </div>
+              <div>
+                <label for="cvv2">CVV2</label>
+                <input type="text" id="cvv2" maxlength="4" placeholder="CVV2" inputmode="numeric" />
+                <span class="error-message" id="cvv2Error"></span>
+              </div>
+            </div>
+            <div class="captcha-row">
+              <input type="checkbox" id="notRobot" />
+              <label for="notRobot">من ربات نیستم</label>
+              <span class="error-message" id="captchaError"></span>
+            </div>
+          </div>
+          <button type="submit" class="pay-btn" id="payBtn">
+            <span class="btn-text">پرداخت و تکمیل سفارش</span>
+            <span class="spinner" id="paySpinner"></span>
+          </button>
+        </form>
+      </section>
+      <aside class="billing-summary">
+        <h3>خلاصه سفارش</h3>
+        <div class="summary-row">
+          <span>جمع جزء</span>
+          <span id="subtotal">۲,۰۰۰,۰۰۰ تومان</span>
+        </div>
+        <div class="summary-row">
+          <span>هزینه ارسال</span>
+          <span id="shipping">۵۰,۰۰۰ تومان</span>
+        </div>
+        <div class="summary-row discount-row" id="discountRow" style="display:none">
+          <span>تخفیف</span>
+          <span id="discount">۰ تومان</span>
+        </div>
+        <div class="summary-row total-row">
+          <span>جمع کل نهایی</span>
+          <span id="finalTotal">۲,۰۵۰,۰۰۰ تومان</span>
+        </div>
+      </aside>
+    </main>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -120,15 +198,17 @@
               <a class="nav-link" href="weblog.html">وبلاگ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./myAccount.html">حساب کاربری من</a>
+              <a class="nav-link" href="#">حساب کاربری من</a>
             </li>
           </ul>
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item position-relative basket-nav-item">
               <a class="nav-link" href="shoppingCart.html" id="basketIcon">
-                <i class="fa-solid fa-basket-shopping fa-xl" style="color: #ffffff"></i>
+                <i
+                  class="fa-solid fa-basket-shopping fa-xl"
+                  style="color: #ffffff"
+                ></i>
               </a>
-         
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
@@ -143,65 +223,10 @@
       </div>
     </nav>
     <!--  -->
-    <div class="container mt-5">
-      <div class="sign-in-header mb-3">
-        <h1>ایجاد حساب کاربری</h1>
-      </div>
-      <div class="sign-in">
-        <form id="signup-form" class="lock-form">
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control"
-              id="userId"
-              required
-              style="direction: ltr; text-align: right; color: #000"
-              placeholder="آیدی"
-            />
-          </div>
-          <div class="form-group">
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              required
-              style="direction: ltr; text-align: right; color: #000"
-              placeholder="ایمیل"
-            />
-          </div>
-          <div class="form-group">
-            <input
-              type="password"
-              class="form-control"
-              id="password"
-              required
-              style="direction: ltr; text-align: right; color: #000"
-              placeholder="رمز عبور"
-            />
-          </div>
-          <div class="form-group">
-            <input
-              type="password"
-              class="form-control"
-              id="confirmPassword"
-              required
-              style="direction: ltr; text-align: right; color: #000"
-              placeholder="تکرار رمز عبور"
-            />
-          </div>
 
-          <button type="submit" class="btn w-100">ثبت‌نام</button>
-          <div
-            id="lock-error"
-            class="text-danger mt-2"
-            style="display: none; color: #000"
-          ></div>
-        </form>
-      </div>
-    </div>
     <!--  -->
-    <footer>
-      <div class="container pt-4 mt-3">
+    <footer class="mt-5">
+      <div class="container pt-4">
         <div class="row">
           <div class="col-12 col-md-4">
             <h3>ARTSCAPE</h3>
@@ -239,33 +264,8 @@
         </div>
       </div>
     </footer>
-
+    <script src="payment.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../main.js"></script>
-    <script src="./signOut.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const basketIcon = document.getElementById("basketIcon");
-        const basketMsg = document.getElementById("basketMsg");
-        if (basketIcon && basketMsg) {
-          basketIcon.addEventListener("mouseenter", function () {
-            basketMsg.style.opacity = "1";
-            basketMsg.style.pointerEvents = "auto";
-          });
-          basketIcon.addEventListener("mouseleave", function () {
-            basketMsg.style.opacity = "0";
-            basketMsg.style.pointerEvents = "none";
-          });
-          basketMsg.addEventListener("mouseenter", function () {
-            basketMsg.style.opacity = "1";
-            basketMsg.style.pointerEvents = "auto";
-          });
-          basketMsg.addEventListener("mouseleave", function () {
-            basketMsg.style.opacity = "0";
-            basketMsg.style.pointerEvents = "none";
-          });
-        }
-      });
-    </script>
   </body>
 </html>

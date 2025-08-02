@@ -1,3 +1,7 @@
+// نمایش تعداد آیتم‌های سبد خرید روی همه صفحات
+document.addEventListener("DOMContentLoaded", function () {
+  // ...کدهای دیگر...
+});
 // داینامیک‌سازی بخش ویژگی‌ها در صفحه خدمات
 if (window.location.pathname.includes("services.html")) {
   const features = [
@@ -659,6 +663,26 @@ if (window.location.pathname.includes("services.html")) {
       image: "../images/photo_2025-05-24_11-27-22.jpg",
       comment: "تجربه بسیار خوبی داشتم و حتماً دوباره همکاری خواهم کرد.",
     },
+    {
+      name: "نام مشتری ۳",
+      image: "../images/photo_2025-05-24_11-27-22.jpg",
+      comment: "تجربه بسیار خوبی داشتم و حتماً دوباره همکاری خواهم کرد.",
+    },
+    {
+      name: "نام مشتری ۳",
+      image: "../images/photo_2025-05-24_11-27-22.jpg",
+      comment: "تجربه بسیار خوبی داشتم و حتماً دوباره همکاری خواهم کرد.",
+    },
+    {
+      name: "نام مشتری ۳",
+      image: "../images/photo_2025-05-24_11-27-22.jpg",
+      comment: "تجربه بسیار خوبی داشتم و حتماً دوباره همکاری خواهم کرد.",
+    },
+    {
+      name: "نام مشتری ۳",
+      image: "../images/photo_2025-05-24_11-27-22.jpg",
+      comment: "تجربه بسیار خوبی داشتم و حتماً دوباره همکاری خواهم کرد.",
+    },
   ];
 
   // تبدیل آرایه comments به ساختار مورد نیاز اسلایدر
@@ -739,5 +763,60 @@ if (window.location.pathname.includes("services.html")) {
       const firstBtn = document.querySelector(".comment-page-btn");
       if (firstBtn) firstBtn.classList.add("btn-warning");
     }, 10);
+  });
+}
+
+// شمارنده سبد خرید و پیام خالی بودن برای همه صفحات
+function getBasketItemCount() {
+  let cartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
+  return cartItems.reduce((sum, item) => sum + (item.count || 1), 0);
+}
+
+function updateBasketCount() {
+  const basketCount = document.getElementById("basketCount");
+  const basketEmptyMsg = document.getElementById("basketEmptyMsg");
+  const count = getBasketItemCount();
+  if (basketCount) {
+    basketCount.textContent = count;
+    basketCount.style.display = count > 0 ? "flex" : "none";
+    basketCount.style.background = "#222";
+    basketCount.style.color = "#fff";
+    basketCount.style.fontSize = "0.85em";
+    basketCount.style.minWidth = "22px";
+    basketCount.style.height = "22px";
+    basketCount.style.lineHeight = "22px";
+    basketCount.style.textAlign = "center";
+    basketCount.style.borderRadius = "50%";
+    basketCount.style.position = "absolute";
+    basketCount.style.top = "-8px";
+    basketCount.style.left = "-8px";
+    basketCount.style.padding = "0";
+    basketCount.style.boxShadow = "0 0 4px #0008";
+    basketCount.style.zIndex = "10";
+    basketCount.style.transition = "all 0.2s";
+    basketCount.style.justifyContent = "center";
+    basketCount.style.alignItems = "center";
+    basketCount.style.alignSelf = "flex-start";
+  }
+  if (basketEmptyMsg) {
+    basketEmptyMsg.style.display = count === 0 ? "block" : "none";
+  }
+}
+
+window.addEventListener("DOMContentLoaded", updateBasketCount);
+window.updateBasketCount = updateBasketCount;
+
+// نمایش پیام خالی بودن سبد هنگام هاور
+const basketIcon = document.getElementById("basketIcon");
+if (basketIcon) {
+  basketIcon.addEventListener("mouseenter", function () {
+    if (getBasketItemCount() === 0) {
+      const basketEmptyMsg = document.getElementById("basketEmptyMsg");
+      if (basketEmptyMsg) basketEmptyMsg.style.display = "block";
+    }
+  });
+  basketIcon.addEventListener("mouseleave", function () {
+    const basketEmptyMsg = document.getElementById("basketEmptyMsg");
+    if (basketEmptyMsg) basketEmptyMsg.style.display = "none";
   });
 }

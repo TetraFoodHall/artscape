@@ -481,6 +481,77 @@ window.addEventListener("DOMContentLoaded", function () {
     origRenderProducts(page);
     addShopProductClickHandlers();
   };
+
+  // افزودن به سبد خرید و ذخیره در localStorage
+  function addToCart(product) {
+    let cartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
+    // اگر محصول قبلاً وجود داشت فقط تعداد را افزایش بده
+    const existing = cartItems.find((item) => item.id === product.id);
+    if (existing) {
+      existing.count = (existing.count || 1) + 1;
+    } else {
+      cartItems.push({ ...product, count: 1 });
+    }
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }
+
+  // هندل کردن کلیک روی دکمه‌های افزودن به سبد خرید بعد از رندر محصولات
+  function handleAddToCartButtons() {
+    document.querySelectorAll(".add-to-cart-btn").forEach((btn) => {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const card = btn.closest(".shop-product-card");
+        const title = card.querySelector("h3").textContent.trim();
+        const product = products.find((p) => p.title === title);
+        if (product) {
+          addToCart(product);
+          // تغییر شمارنده سبد خرید
+          updateBasketCount();
+          // نمایش پیام موفقیت
+          showAddToCartSuccess();
+        }
+      });
+    });
+  }
+
+  // بروزرسانی شمارنده سبد خرید و پیام خالی بودن
+  function updateBasketCount() {
+    let cartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
+    let total = cartItems.reduce((sum, item) => sum + (item.count || 1), 0);
+    const basketCount = document.getElementById("basketCount");
+    const basketEmptyMsg = document.getElementById("basketEmptyMsg");
+    if (basketCount) basketCount.textContent = total;
+    if (basketEmptyMsg) {
+      if (total > 0) {
+        basketEmptyMsg.style.display = "none";
+      } else {
+        basketEmptyMsg.style.display = "block";
+      }
+    }
+  }
+
+  // نمایش پیام موفقیت
+  function showAddToCartSuccess() {
+    let msg = document.createElement("div");
+    msg.textContent = "محصول با موفقیت به سبد خرید اضافه شد!";
+    msg.style.position = "fixed";
+    msg.style.bottom = "32px";
+    msg.style.left = "50%";
+    msg.style.transform = "translateX(-50%)";
+    msg.style.background = "#222";
+    msg.style.color = "#fff";
+    msg.style.padding = "12px 32px";
+    msg.style.borderRadius = "12px";
+    msg.style.zIndex = 9999;
+    msg.style.fontSize = "1.1em";
+    document.body.appendChild(msg);
+    setTimeout(() => msg.remove(), 1800);
+  }
+
+  // مقداردهی اولیه شمارنده سبد خرید
+  updateBasketCount();
+  // بار اول
+  handleAddToCartButtons();
   // Initial call
   addShopProductClickHandlers();
 });

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تایید سفارش | ARTSCAPE</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="orderConfirmation.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.rtl.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="receipt-container">
+      <div class="success-icon">
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="24" cy="24" r="24" fill="#4fd18b" />
+          <path
+            d="M34 18L22 30L14 22"
+            stroke="#fff"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div class="receipt-heading">سفارش شما با موفقیت ثبت شد!</div>
+      <div class="receipt-subheading">
+        رسید سفارش شما در ادامه نمایش داده می‌شود.
+      </div>
+      <!-- Order Summary -->
+      <div class="order-summary mb-3">
+        <div class="order-summary-row">
+          <span>شماره سفارش:</span>
+          <span>۱۲۳۴۵۶۷۸</span>
+        </div>
+        <div class="order-summary-row">
+          <span>تاریخ و ساعت خرید:</span>
+          <span>۱۴۰۴/۰۵/۱۱ - ۱۶:۳۵</span>
+        </div>
+        <div class="order-summary-row">
+          <span>روش پرداخت:</span>
+          <span>پرداخت آنلاین</span>
+        </div>
+        <div class="order-summary-row">
+          <span>شماره پیگیری پرداخت:</span>
+          <span>۹۸۷۶۵۴۳۲۱۰</span>
+        </div>
+        <div class="order-summary-row">
+          <span>تحویل:</span>
+          <span>بین ۳ تا ۵ روز کاری</span>
+        </div>
+      </div>
+      <!-- Buyer Details -->
+      <div class="buyer-details mb-3">
+        <div class="buyer-details-row">
+          <span>نام و نام خانوادگی:</span>
+          <span>علی رضایی</span>
+        </div>
+        <div class="buyer-details-row">
+          <span>شماره تماس:</span>
+          <span>۰۹۱۲۱۲۳۴۵۶۷</span>
+        </div>
+        <div class="buyer-details-row">
+          <span>آدرس:</span>
+          <span>تهران، خیابان آزادی، پلاک ۱۲۳، واحد ۴</span>
+        </div>
+      </div>
+      <!-- Product List -->
+      <div class="product-list mb-3">
+        <table class="product-table table table-bordered align-middle">
+          <thead>
+            <tr>
+              <th>تصویر</th>
+              <th>نام محصول</th>
+              <th>تعداد</th>
+              <th>قیمت واحد</th>
+              <th>قیمت کل</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img
+                  src="../images/photo_2025-05-22_15-30-26.jpg"
+                  alt="محصول ۱"
+                />
+              </td>
+              <td>تابلو نقاشی طبیعت</td>
+              <td>۲</td>
+              <td>۱,۰۰۰,۰۰۰ تومان</td>
+              <td>۲,۰۰۰,۰۰۰ تومان</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="../images/photo_2025-05-22_15-30-33.jpg"
+                  alt="محصول ۲"
+                />
+              </td>
+              <td>پوستر هنری</td>
+              <td>۱</td>
+              <td>۵۰۰,۰۰۰ تومان</td>
+              <td>۵۰۰,۰۰۰ تومان</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Payment Summary -->
+      <div class="payment-summary mb-3">
+        <div class="payment-summary-row">
+          <span>جمع جزء</span>
+          <span>۲,۵۰۰,۰۰۰ تومان</span>
+        </div>
+        <div class="payment-summary-row">
+          <span>هزینه ارسال</span>
+          <span>۵۰,۰۰۰ تومان</span>
+        </div>
+        <div class="payment-summary-row">
+          <span>تخفیف</span>
+          <span>۱۰۰,۰۰۰ تومان</span>
+        </div>
+        <div class="payment-summary-row total">
+          <span>جمع نهایی</span>
+          <span>۲,۴۵۰,۰۰۰ تومان</span>
+        </div>
+      </div>
+      <!-- Actions -->
+      <div class="receipt-actions">
+        <a href="../index.html" class="btn btn-success">بازگشت به صفحه اصلی</a>
+        <a href="myAccount.html" class="btn btn-outline-success"
+          >مشاهده سوابق سفارش‌ها</a
+        >
+        <button
+          class="btn btn-share"
+          onclick="alert('رسید سفارش به ایمیل شما ارسال شد!')"
+        >
+          ارسال رسید به ایمیل
+        </button>
+      </div>
+    </div>
+  </body>
+    <script src="../main.js"></script>
+</html>

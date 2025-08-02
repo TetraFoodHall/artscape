@@ -123,13 +123,11 @@
             </li>
           </ul>
           <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i
-                  class="fa-solid fa-basket-shopping fa-xl"
-                  style="color: #ffffff"
-                ></i>
+            <li class="nav-item position-relative basket-nav-item">
+              <a class="nav-link" href="shoppingCart.html" id="basketIcon">
+                <i class="fa-solid fa-basket-shopping fa-xl" style="color: #ffffff"></i>
               </a>
+           
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
@@ -385,5 +383,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../main.js"></script>
     <script src="./videography.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const basketIcon = document.getElementById("basketIcon");
+  const basketMsg = document.getElementById("basketMsg");
+  if (basketIcon && basketMsg) {
+    basketIcon.addEventListener("mouseenter", function () {
+      basketMsg.style.opacity = "1";
+      basketMsg.style.pointerEvents = "auto";
+    });
+    basketIcon.addEventListener("mouseleave", function () {
+      basketMsg.style.opacity = "0";
+      basketMsg.style.pointerEvents = "none";
+    });
+    basketMsg.addEventListener("mouseenter", function () {
+      basketMsg.style.opacity = "1";
+      basketMsg.style.pointerEvents = "auto";
+    });
+    basketMsg.addEventListener("mouseleave", function () {
+      basketMsg.style.opacity = "0";
+      basketMsg.style.pointerEvents = "none";
+    });
+  }
+});
+</script>
   </body>
 </html>
